@@ -1,0 +1,30 @@
+{
+  "name": "subcribe",
+  "version": "1.0.0",
+  "description": "API to collect invite emails.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meanwise-eng/Subscriptions.git"
+  },
+  "author": "Punit Grover",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meanwise-eng/Subscriptions/issues"
+  },
+  "homepage": "https://github.com/meanwise-eng/Subscriptions#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.4.20",
+    "request": "^2.72.0",
+    "sendgrid": "^4.3.1",
+    "sendgrid-rest": "^2.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}

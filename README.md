@@ -1,1 +1,1 @@
-# Invitations
+# Subscriptions
