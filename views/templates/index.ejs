@@ -1,23 +1,83 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Meanwise</title>
+	<meta property="og:image" content="http://54.68.84.196/img/meanw.png"/>
+  <meta property="og:title" content="Meanwise - Life . Work . Balance"/>
+  <meta property="og:url" content="http://meanwise.com"/>
+  <meta property="og:site_name" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content."/>
+	<meta name="twitter:card" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content.">
+	<meta name="twitter:url" content="http://meanwise.com">
+	<meta name="twitter:title" content="Meanwise - Life . Work . Balance">
+	<meta name="twitter:description" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content.">
+	<meta name="twitter:image" content="http://54.68.84.196/img/meanw.png">
+
 	<meta name="description" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content.">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>Meanwise - Life . Work . Balance</title>
 </head>
 <body>
+
+	<div id="modal-02">
+			<!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+			<div  id="btn-close-modal" class="close-modal-02">
+					<img class="closebt" src="img/closebt.svg">
+			</div>
+
+			<div class="modal-content">
+				<h1>Request early invite</h1>
+				<form id="invite-form" action="/" method="POST">
+					<input type="text" name="email" />
+					<p class="err">There was an error. Please try again.</p>
+					<button>Submit</button>
+				</form>
+			</div>
+	</div>
+
 	<header class="cd-header" data-type="slider-item">
 		<img id="logo" src="img/mlogo.png" />
-		<h1>Life . Work . Balance</h1>
-		<form action="/" method="POST" accept-charset="utf-8">
-			<label for="email">Enter your email to subscribe</label>
-			<input type="text" name="email">
-			<button type="submit">Submit</button>
-		</form>
+		<a id="demo02" href="#modal-02">Request Invite</a>
+		<h1>Life . Work . Balance
+			<br><span id="launch">Launching Fall 2016</span>
+		</h1>
 	</header>
+
+	<div class="relative-wrapper">
+		<section class="cd-fixed-background img-1" data-type="slider-item">
+			<div class="cd-content">
+				<h2>Speak your mind. Show what you can do with a Live Profile</h2>
+			</div>
+		</section>
+	</div>
+
+	<div class="relative-wrapper">
+		<section class="cd-fixed-background img-2" data-type="slider-item">
+			<div class="cd-content">
+				<h2>Express yourself. Let your work inspire others</h2>
+			</div>
+		</section>
+	</div>
+
+	<div class="relative-wrapper">
+		<section class="cd-fixed-background img-3" data-type="slider-item">
+			<div class="cd-content">
+				<h2>Join discussions. Be part of an engaged community</h2>
+			</div>
+		</section>
+	</div>
+
+	<div id="foot"><h2>© Meanwise, Inc.</h2></div>
+
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
