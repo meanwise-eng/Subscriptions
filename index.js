@@ -8,10 +8,37 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-var sg = require('sendgrid')(SENDGRID_API_KEY);
-
 app.set('view engine', 'ejs');
 app.use(express.static('views'));
+
+var sg = require('sendgrid')(SENDGRID_API_KEY);
+
+function helloEmail(useremail){
+    var helper = require('sendgrid').mail;
+
+    from_email = new helper.Email("punit@meanwise.com");
+    to_email = new helper.Email(useremail);
+    subject = "Hello World from the SendGrid Node.js Library";
+    content = new helper.Content("text/plain", "some text here");
+    mail = new helper.Mail(from_email, subject, to_email, content);
+    
+    return mail.toJSON()
+}
+
+function send(toSend){
+    // console.log(JSON.stringify(toSend, null, 2));
+    //console.log(JSON.stringify(toSend))
+    var requestBody = toSend;
+    var emptyRequest = require('sendgrid-rest').request;
+    var requestPost = JSON.parse(JSON.stringify(emptyRequest));
+    requestPost.method = 'POST';
+    requestPost.path = '/v3/mail/send';
+    requestPost.body = requestBody;
+    sg.API(requestPost, function (error, response) {
+        error ? console.log(error) : console.log("An email has been send to the user");
+    })
+}
+
 
 app.get('/', function (req, res) {
     res.render('templates/index');
@@ -40,13 +67,18 @@ app.post('/', function (req, res) {
         reqs.path = '/v3/contactdb/lists/' + list_id + '/recipients/' + recipient_id;
         
         sg.API(reqs, function (error, resp) {
-            error ? console.log(error) : console.log('Email successfully added to the list');
+            if (error) {
+                console.log(error);
+            }
+            else {
+                console.log('Email successfully added to the list');
+                send(helloEmail(email));
+            }
         });
     });
     
     res.render('templates/index');
 });
-
 
 
 var server = app.listen(3000, function () {
