@@ -34,9 +34,10 @@
 
 			<div class="modal-content">
 				<h1>Request early invite</h1>
-				<form id="invite-form" action="/" method="POST">
-					<input type="text" name="email" />
-					<p class="err">There was an error. Please try again.</p>
+				<form id="invite-form" onSubmit="subscribe(event)">
+					<input class="email" type="text" name="email" />
+					<p class="err"></p>
+					
 					<button>Submit</button>
 				</form>
 			</div>
@@ -79,5 +80,27 @@
 	<script src="js/jquery-2.1.1.js"></script>
 	<script src="js/animatedModal.min.js"></script>
 	<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<script>
+
+	function subscribe(event) {
+		event.preventDefault();
+		var email = $('.email')[0];
+		$('.err')[0].innerHTML = "Please Wait...";
+
+		$.ajax({ 
+			url: '/subscribe',
+			type: 'POST',
+			cache: false, 
+			data: { email: email.value },
+			success: function(data){
+				email.value = '';
+				$('.err')[0].innerHTML = data.message;
+			},
+			error: function(data){
+				$('.err')[0].innerHTML = data.message;
+			}
+        });
+	}
+	</script>
 </body>
 </html>

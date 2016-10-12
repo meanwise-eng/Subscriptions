@@ -1,17 +1,23 @@
 var express = require('express');
-var app = express();
-var SENDGRID_API_KEY = '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';
 
 var bodyParser = require('body-parser');
+var validator = require('express-validator');
+
+var app = express();
+
+var SENDGRID_API_KEY = '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';
+var sg = require('sendgrid')(SENDGRID_API_KEY);
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(validator());
 
 app.set('view engine', 'ejs');
 app.use(express.static('views'));
 
-var sg = require('sendgrid')(SENDGRID_API_KEY);
 
 function helloEmail(useremail){
     var helper = require('sendgrid').mail;
@@ -47,6 +53,15 @@ app.get('/', function (req, res) {
 app.post('/', function (req, res) {
     var email = req.body.email;
     console.log(email);
+  //   req.checkBody("email").isEmail();
+  //   var errors = req.validationErrors();
+  //   if (errors) {
+  //       res.render('templates/index', { errors: errors });
+  //   return;
+  //   } 
+  //   else {
+  //   // normal processing here
+  // }
     var request = sg.emptyRequest();
     request.body = [
         {
@@ -67,6 +82,7 @@ app.post('/', function (req, res) {
         reqs.path = '/v3/contactdb/lists/' + list_id + '/recipients/' + recipient_id;
         
         sg.API(reqs, function (error, resp) {
+            err = error
             if (error) {
                 console.log(error);
             }
@@ -78,6 +94,59 @@ app.post('/', function (req, res) {
     });
     
     res.render('templates/index');
+});
+
+app.post('/subscribe', function(req, res){
+    var email = req.body.email;
+    console.log(email);
+    var result = {};
+    res.writeHead(200, {"Content-Type": "application/json"});
+
+    req.checkBody("email").isEmail();
+    var errors = req.validationErrors();
+    
+    if (errors) {
+        result = {
+            status: 400,
+            message: 'Your email is not valid. Please enter a valid email address.'
+        };
+        res.end(JSON.stringify(result));
+    }
+    else {
+        var request = sg.emptyRequest();
+        request.body = [
+            {
+                'email': email
+            }
+        ];
+        request.method = 'POST';
+        request.path = '/v3/contactdb/recipients';
+        sg.API(request, function (error, response) {
+            var data = JSON.parse(response.body);
+            var reqs = sg.emptyRequest();
+            var list_id = 623934;
+            var recipient_id = data["persisted_recipients"][0];
+            
+            reqs.method = 'POST';
+            reqs.path = '/v3/contactdb/lists/' + list_id + '/recipients/' + recipient_id;
+            
+            sg.API(reqs, function (error, resp) {
+                err = error
+                if (error) {
+                    console.log(error);
+                }
+                else {
+                    console.log('Email successfully added to the list');
+                    send(helloEmail(email));
+                }
+                result = {
+                    status: 200,
+                    message: "You've been successfully subscribed"
+                };
+                res.end(JSON.stringify(result));
+            });
+        });
+    }
 });
 
 
