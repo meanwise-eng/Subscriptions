@@ -5,7 +5,7 @@ var validator = require('express-validator');
 
 var app = express();
 
-var SENDGRID_API_KEY = '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';
+var SENDGRID_API_KEY = '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';
 var sg = require('sendgrid')(SENDGRID_API_KEY);
 
 
@@ -22,9 +22,9 @@ app.use(express.static('views'));
 function helloEmail(useremail){
     var helper = require('sendgrid').mail;
 
-    from_email = new helper.Email("punit@meanwise.com");
+    from_email = new helper.Email("engineering@meanwise.com");
     to_email = new helper.Email(useremail);
-    subject = "Hello World from the SendGrid Node.js Library";
+    subject = "Hello World";
     content = new helper.Content("text/plain", "some text here");
     mail = new helper.Mail(from_email, subject, to_email, content);
     
@@ -32,8 +32,6 @@ function helloEmail(useremail){
 }
 
 function send(toSend){
-    // console.log(JSON.stringify(toSend, null, 2));
-    //console.log(JSON.stringify(toSend))
     var requestBody = toSend;
     var emptyRequest = require('sendgrid-rest').request;
     var requestPost = JSON.parse(JSON.stringify(emptyRequest));
@@ -53,15 +51,6 @@ app.get('/', function (req, res) {
 app.post('/', function (req, res) {
     var email = req.body.email;
     console.log(email);
-  //   req.checkBody("email").isEmail();
-  //   var errors = req.validationErrors();
-  //   if (errors) {
-  //       res.render('templates/index', { errors: errors });
-  //   return;
-  //   } 
-  //   else {
-  //   // normal processing here
-  // }
     var request = sg.emptyRequest();
     request.body = [
         {
@@ -75,7 +64,7 @@ app.post('/', function (req, res) {
     sg.API(request, function (error, response) {
         var data = JSON.parse(response.body);
         var reqs = sg.emptyRequest();
-        var list_id = 623934;
+        var list_id = 665876;
         var recipient_id = data["persisted_recipients"][0];
         
         reqs.method = 'POST';
@@ -124,7 +113,7 @@ app.post('/subscribe', function(req, res){
         sg.API(request, function (error, response) {
             var data = JSON.parse(response.body);
             var reqs = sg.emptyRequest();
-            var list_id = 623934;
+            var list_id = 665876;
             var recipient_id = data["persisted_recipients"][0];
             
             reqs.method = 'POST';
