@@ -21,12 +21,17 @@ app.use(express.static('views'));
 
 function helloEmail(useremail){
     var helper = require('sendgrid').mail;
+    mail = new helper.Mail();
+    personalization = new helper.Personalization()
 
-    from_email = new helper.Email("engineering@meanwise.com");
+    from_email = new helper.Email("m@meanwise.com", "Team Meanwise");
+    mail.setFrom(from_email);
+    
     to_email = new helper.Email(useremail);
-    subject = "Hello World";
-    content = new helper.Content("text/plain", "some text here");
-    mail = new helper.Mail(from_email, subject, to_email, content);
+    personalization.addTo(to_email)
+    mail.addPersonalization(personalization)
+
+    mail.setTemplateId("186c5da5-6045-49d6-855a-ec9ec579c3a6");
     
     return mail.toJSON()
 }
