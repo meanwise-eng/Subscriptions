@@ -138,8 +138,8 @@ Main Components
 	font-family: 'Avenir Next';
 	font-weight: 900;
 	position: absolute;
-	transform: translateX(-50%);
-	left: 50%;
+	transform: translateX(-42%);
+	left: 45%;
 	bottom: 60px;
 	color: white;
 	letter-spacing: 2px;
@@ -310,6 +310,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 @media only screen and (min-width: 768px) {
 	#demo02 {
 		font-size: 16px;
+		transform: translateX(-50%);
+		left: 50%;
 	}
 	.modal-content h1 {
 		font-size: 48px;
