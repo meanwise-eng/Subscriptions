@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var validator = require('express-validator');
 
 var app = express();
+var nunjucks = require('nunjucks');
 
 var SENDGRID_API_KEY = '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';
 var sg = require('sendgrid')(SENDGRID_API_KEY);
@@ -15,7 +16,15 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(validator());
 
-app.set('view engine', 'ejs');
+// var _templates = process.env.NODE_PATH ? process.env.NODE_PATH + './views/templates' : 'templates' ;
+
+nunjucks.configure('views', {
+    autoescape: true,
+    express: app
+});
+
+app.engine('html', nunjucks.render);
+app.set('view engine', 'html');
 app.use(express.static('views'));
 
 
@@ -50,7 +59,7 @@ function send(toSend){
 
 
 app.get('/', function (req, res) {
-    res.render('templates/index');
+    res.render('templates/index.html');
 });
 
 app.post('/', function (req, res) {
@@ -87,7 +96,7 @@ app.post('/', function (req, res) {
         });
     });
     
-    res.render('templates/index');
+    res.render('templates/index.html');
 });
 
 app.post('/subscribe', function(req, res){
