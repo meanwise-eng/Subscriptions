@@ -1,0 +1,210 @@
+{"level":"info","message":"GET / 200 58ms","timestamp":"2016-10-25T14:57:10.498Z"}
+{"level":"info","message":"GET /public/css/index.css 200 19ms","timestamp":"2016-10-25T14:57:10.536Z"}
+{"level":"info","message":"GET /public/js/bundle.lib.js 200 20ms","timestamp":"2016-10-25T14:57:10.540Z"}
+{"level":"info","message":"GET /public/js/bundle.js 200 71ms","timestamp":"2016-10-25T14:57:10.592Z"}
+{"level":"info","message":"GET / 200 42ms","timestamp":"2016-10-25T15:16:31.899Z"}
+{"level":"warn","message":"GET /css/reset.css 404 7ms","timestamp":"2016-10-25T15:16:31.931Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 4ms","timestamp":"2016-10-25T15:16:31.967Z"}
+{"level":"warn","message":"GET /css/style.css 404 4ms","timestamp":"2016-10-25T15:16:31.974Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 2ms","timestamp":"2016-10-25T15:16:32.438Z"}
+{"level":"warn","message":"GET /js/jquery-2.1.1.js 404 2ms","timestamp":"2016-10-25T15:16:32.454Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 2ms","timestamp":"2016-10-25T15:16:32.508Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 5ms","timestamp":"2016-10-25T15:16:32.513Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 2ms","timestamp":"2016-10-25T15:16:32.522Z"}
+{"level":"warn","message":"GET /js/jquery-2.1.1.js 404 4ms","timestamp":"2016-10-25T15:16:32.528Z"}
+{"level":"warn","message":"GET /js/main.js 404 6ms","timestamp":"2016-10-25T15:16:32.533Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 6ms","timestamp":"2016-10-25T15:16:32.534Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 1ms","timestamp":"2016-10-25T15:16:32.561Z"}
+{"level":"warn","message":"GET /js/main.js 404 2ms","timestamp":"2016-10-25T15:16:32.574Z"}
+{"level":"warn","message":"GET /css/reset.css 404 6ms","timestamp":"2016-10-25T15:16:36.726Z"}
+{"level":"warn","message":"GET /css/style.css 404 5ms","timestamp":"2016-10-25T15:16:36.730Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 4ms","timestamp":"2016-10-25T15:18:25.399Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 2ms","timestamp":"2016-10-25T15:18:26.071Z"}
+{"level":"warn","message":"GET /js/main.js 404 2ms","timestamp":"2016-10-25T15:18:26.076Z"}
+{"level":"info","message":"GET / 200 43ms","timestamp":"2016-10-25T15:29:24.971Z"}
+{"level":"warn","message":"GET /css/reset.css 404 8ms","timestamp":"2016-10-25T15:29:25.002Z"}
+{"level":"warn","message":"GET /css/style.css 404 11ms","timestamp":"2016-10-25T15:29:25.010Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 12ms","timestamp":"2016-10-25T15:29:25.012Z"}
+{"level":"warn","message":"GET /js/jquery-2.1.1.js 404 3ms","timestamp":"2016-10-25T15:29:25.027Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 1ms","timestamp":"2016-10-25T15:29:25.065Z"}
+{"level":"warn","message":"GET /js/main.js 404 1ms","timestamp":"2016-10-25T15:29:25.106Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 1ms","timestamp":"2016-10-25T15:29:25.151Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 1ms","timestamp":"2016-10-25T15:29:25.194Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 2ms","timestamp":"2016-10-25T15:29:25.572Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 2ms","timestamp":"2016-10-25T15:29:25.582Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 3ms","timestamp":"2016-10-25T15:29:25.589Z"}
+{"level":"warn","message":"GET /js/jquery-2.1.1.js 404 2ms","timestamp":"2016-10-25T15:29:25.591Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 3ms","timestamp":"2016-10-25T15:29:25.628Z"}
+{"level":"warn","message":"GET /js/main.js 404 2ms","timestamp":"2016-10-25T15:29:25.644Z"}
+{"level":"warn","message":"GET /css/reset.css 404 16ms","timestamp":"2016-10-25T15:29:34.489Z"}
+{"level":"warn","message":"GET /css/style.css 404 5ms","timestamp":"2016-10-25T15:29:34.493Z"}
+{"level":"info","message":"GET / 304 31ms","timestamp":"2016-10-25T15:31:53.616Z"}
+{"level":"warn","message":"GET /css/reset.css 404 9ms","timestamp":"2016-10-25T15:31:53.651Z"}
+{"level":"warn","message":"GET /css/style.css 404 11ms","timestamp":"2016-10-25T15:31:53.659Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 12ms","timestamp":"2016-10-25T15:31:53.661Z"}
+{"level":"warn","message":"GET /js/jquery-2.1.1.js 404 2ms","timestamp":"2016-10-25T15:31:53.666Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 1ms","timestamp":"2016-10-25T15:31:53.719Z"}
+{"level":"warn","message":"GET /js/main.js 404 1ms","timestamp":"2016-10-25T15:31:53.763Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 1ms","timestamp":"2016-10-25T15:31:53.806Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 3ms","timestamp":"2016-10-25T15:31:53.852Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 3ms","timestamp":"2016-10-25T15:31:54.250Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 3ms","timestamp":"2016-10-25T15:31:54.270Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 4ms","timestamp":"2016-10-25T15:31:54.273Z"}
+{"level":"warn","message":"GET /js/jquery-2.1.1.js 404 5ms","timestamp":"2016-10-25T15:31:54.275Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 2ms","timestamp":"2016-10-25T15:31:54.301Z"}
+{"level":"warn","message":"GET /js/main.js 404 2ms","timestamp":"2016-10-25T15:31:54.311Z"}
+{"level":"warn","message":"GET /css/reset.css 404 20ms","timestamp":"2016-10-25T15:31:57.009Z"}
+{"level":"warn","message":"GET /css/style.css 404 3ms","timestamp":"2016-10-25T15:31:57.012Z"}
+{"level":"info","message":"GET / 304 13ms","timestamp":"2016-10-25T15:44:11.199Z"}
+{"level":"warn","message":"GET /css/reset.css 404 3ms","timestamp":"2016-10-25T15:44:11.221Z"}
+{"level":"warn","message":"GET /css/style.css 404 3ms","timestamp":"2016-10-25T15:44:11.229Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 4ms","timestamp":"2016-10-25T15:44:11.232Z"}
+{"level":"warn","message":"GET /js/jquery-2.1.1.js 404 3ms","timestamp":"2016-10-25T15:44:11.240Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 2ms","timestamp":"2016-10-25T15:44:11.300Z"}
+{"level":"warn","message":"GET /js/main.js 404 1ms","timestamp":"2016-10-25T15:44:11.343Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 1ms","timestamp":"2016-10-25T15:44:11.384Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 2ms","timestamp":"2016-10-25T15:44:11.425Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 5ms","timestamp":"2016-10-25T15:44:11.808Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 5ms","timestamp":"2016-10-25T15:44:11.822Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 7ms","timestamp":"2016-10-25T15:44:11.826Z"}
+{"level":"warn","message":"GET /js/jquery-2.1.1.js 404 8ms","timestamp":"2016-10-25T15:44:11.828Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 2ms","timestamp":"2016-10-25T15:44:11.856Z"}
+{"level":"warn","message":"GET /js/main.js 404 2ms","timestamp":"2016-10-25T15:44:11.868Z"}
+{"level":"info","message":"GET / 304 44ms","timestamp":"2016-10-25T15:44:23.504Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 11ms","timestamp":"2016-10-25T15:44:23.537Z"}
+{"level":"warn","message":"GET /css/reset.css 404 11ms","timestamp":"2016-10-25T15:44:23.545Z"}
+{"level":"warn","message":"GET /css/style.css 404 12ms","timestamp":"2016-10-25T15:44:23.547Z"}
+{"level":"warn","message":"GET /js/jquery-2.1.1.js 404 3ms","timestamp":"2016-10-25T15:44:23.558Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 1ms","timestamp":"2016-10-25T15:44:23.599Z"}
+{"level":"warn","message":"GET /js/main.js 404 2ms","timestamp":"2016-10-25T15:44:23.640Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 2ms","timestamp":"2016-10-25T15:44:23.679Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 4ms","timestamp":"2016-10-25T15:44:23.723Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 2ms","timestamp":"2016-10-25T15:44:23.811Z"}
+{"level":"warn","message":"GET /js/jquery-2.1.1.js 404 1ms","timestamp":"2016-10-25T15:44:23.844Z"}
+{"level":"warn","message":"GET /js/animatedModal.min.js 404 3ms","timestamp":"2016-10-25T15:44:23.857Z"}
+{"level":"warn","message":"GET /js/main.js 404 2ms","timestamp":"2016-10-25T15:44:23.864Z"}
+{"level":"info","message":"GET / 200 48ms","timestamp":"2016-10-25T15:51:57.290Z"}
+{"level":"warn","message":"GET /css/style.css 404 8ms","timestamp":"2016-10-25T15:51:57.333Z"}
+{"level":"info","message":"GET /public/css/reset.css 200 33ms","timestamp":"2016-10-25T15:51:57.337Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 9ms","timestamp":"2016-10-25T15:51:57.340Z"}
+{"level":"info","message":"GET /public/js/jquery-2.1.1.js 200 12ms","timestamp":"2016-10-25T15:51:57.355Z"}
+{"level":"info","message":"GET /public/js/animatedModal.min.js 200 2ms","timestamp":"2016-10-25T15:51:57.396Z"}
+{"level":"info","message":"GET /public/js/main.js 200 2ms","timestamp":"2016-10-25T15:51:57.441Z"}
+{"level":"info","message":"GET /public/js/bundle.lib.js 200 1ms","timestamp":"2016-10-25T15:51:57.484Z"}
+{"level":"info","message":"GET /public/js/bundle.js 200 20ms","timestamp":"2016-10-25T15:51:57.545Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 2ms","timestamp":"2016-10-25T15:51:57.580Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 2ms","timestamp":"2016-10-25T15:51:57.624Z"}
+{"level":"warn","message":"GET /js/modernizr.js 404 2ms","timestamp":"2016-10-25T15:51:57.921Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 2ms","timestamp":"2016-10-25T15:51:57.928Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 1ms","timestamp":"2016-10-25T15:51:57.933Z"}
+{"level":"info","message":"GET /public/img/favicon.ico 200 2ms","timestamp":"2016-10-25T15:51:58.160Z"}
+{"level":"info","message":"GET /public/css/reset.css 304 5ms","timestamp":"2016-10-25T15:52:04.840Z"}
+{"level":"warn","message":"GET /css/style.css 404 19ms","timestamp":"2016-10-25T15:52:04.855Z"}
+{"level":"info","message":"GET / 200 65ms","timestamp":"2016-10-25T15:54:54.816Z"}
+{"level":"info","message":"GET /public/css/reset.css 304 8ms","timestamp":"2016-10-25T15:54:54.857Z"}
+{"level":"info","message":"GET /public/css/style.css 200 27ms","timestamp":"2016-10-25T15:54:54.860Z"}
+{"level":"info","message":"GET /public/js/modernizr.js 200 27ms","timestamp":"2016-10-25T15:54:54.863Z"}
+{"level":"info","message":"GET /public/js/jquery-2.1.1.js 304 1ms","timestamp":"2016-10-25T15:54:54.869Z"}
+{"level":"info","message":"GET /public/js/animatedModal.min.js 304 1ms","timestamp":"2016-10-25T15:54:54.876Z"}
+{"level":"info","message":"GET /public/js/main.js 304 0ms","timestamp":"2016-10-25T15:54:54.888Z"}
+{"level":"info","message":"GET /public/js/bundle.lib.js 304 0ms","timestamp":"2016-10-25T15:54:54.903Z"}
+{"level":"info","message":"GET /public/js/bundle.js 304 0ms","timestamp":"2016-10-25T15:54:54.932Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 2ms","timestamp":"2016-10-25T15:54:54.947Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 1ms","timestamp":"2016-10-25T15:54:54.988Z"}
+{"level":"info","message":"GET /public/fonts/AvenirNext-Heavy.woff 200 3ms","timestamp":"2016-10-25T15:54:55.604Z"}
+{"level":"warn","message":"GET /img/closebt.svg 404 8ms","timestamp":"2016-10-25T15:54:55.617Z"}
+{"level":"warn","message":"GET /img/mlogo.png 404 9ms","timestamp":"2016-10-25T15:54:55.618Z"}
+{"level":"info","message":"GET /public/img/img-1.jpg 200 14ms","timestamp":"2016-10-25T15:54:55.622Z"}
+{"level":"info","message":"GET /public/fonts/AvenirNext-DemiBold.woff 200 16ms","timestamp":"2016-10-25T15:54:55.624Z"}
+{"level":"info","message":"GET /public/img/img-2.jpg 200 11ms","timestamp":"2016-10-25T15:54:55.628Z"}
+{"level":"info","message":"GET /public/img/img-3.jpg 200 10ms","timestamp":"2016-10-25T15:54:55.641Z"}
+{"level":"info","message":"GET /public/img/img-mobile-1.png 200 27ms","timestamp":"2016-10-25T15:54:55.643Z"}
+{"level":"info","message":"GET /public/img/img-mobile-2.png 200 19ms","timestamp":"2016-10-25T15:54:55.649Z"}
+{"level":"info","message":"GET /public/img/img-mobile-3.png 200 13ms","timestamp":"2016-10-25T15:54:55.650Z"}
+{"level":"info","message":"GET /public/img/favicon.ico 200 4ms","timestamp":"2016-10-25T15:54:55.893Z"}
+{"level":"info","message":"GET /public/css/reset.css 304 1ms","timestamp":"2016-10-25T15:55:09.169Z"}
+{"level":"info","message":"GET /public/css/style.css 304 1ms","timestamp":"2016-10-25T15:55:09.175Z"}
+{"level":"info","message":"GET / 200 47ms","timestamp":"2016-10-25T15:56:22.773Z"}
+{"level":"info","message":"GET /public/css/reset.css 304 3ms","timestamp":"2016-10-25T15:56:22.807Z"}
+{"level":"info","message":"GET /public/css/style.css 304 4ms","timestamp":"2016-10-25T15:56:22.808Z"}
+{"level":"info","message":"GET /public/js/modernizr.js 304 5ms","timestamp":"2016-10-25T15:56:22.811Z"}
+{"level":"info","message":"GET /public/js/jquery-2.1.1.js 304 1ms","timestamp":"2016-10-25T15:56:22.820Z"}
+{"level":"info","message":"GET /public/js/animatedModal.min.js 304 1ms","timestamp":"2016-10-25T15:56:22.853Z"}
+{"level":"info","message":"GET /public/js/main.js 304 1ms","timestamp":"2016-10-25T15:56:22.862Z"}
+{"level":"info","message":"GET /public/img/closebt.svg 200 2ms","timestamp":"2016-10-25T15:56:22.871Z"}
+{"level":"info","message":"GET /public/img/mlogo.png 200 2ms","timestamp":"2016-10-25T15:56:22.914Z"}
+{"level":"info","message":"GET /public/js/bundle.lib.js 304 1ms","timestamp":"2016-10-25T15:56:23.367Z"}
+{"level":"info","message":"GET /public/js/bundle.js 304 0ms","timestamp":"2016-10-25T15:56:23.370Z"}
+{"level":"info","message":"GET /public/fonts/AvenirNext-Heavy.woff 304 1ms","timestamp":"2016-10-25T15:56:23.641Z"}
+{"level":"info","message":"GET /public/fonts/AvenirNext-DemiBold.woff 304 1ms","timestamp":"2016-10-25T15:56:23.645Z"}
+{"level":"info","message":"GET /public/img/img-1.jpg 304 0ms","timestamp":"2016-10-25T15:56:23.649Z"}
+{"level":"info","message":"GET /public/img/img-mobile-1.png 304 1ms","timestamp":"2016-10-25T15:56:23.654Z"}
+{"level":"info","message":"GET /public/img/img-2.jpg 304 2ms","timestamp":"2016-10-25T15:56:23.657Z"}
+{"level":"info","message":"GET /public/img/img-mobile-2.png 304 6ms","timestamp":"2016-10-25T15:56:23.659Z"}
+{"level":"info","message":"GET /public/img/img-3.jpg 304 1ms","timestamp":"2016-10-25T15:56:23.662Z"}
+{"level":"info","message":"GET /public/img/img-mobile-3.png 304 1ms","timestamp":"2016-10-25T15:56:23.666Z"}
+{"level":"info","message":"GET /public/img/favicon.ico 200 4ms","timestamp":"2016-10-25T15:56:23.834Z"}
+{"level":"info","message":"GET / 200 86ms","timestamp":"2016-10-25T15:58:20.413Z"}
+{"level":"info","message":"GET /public/css/reset.css 304 12ms","timestamp":"2016-10-25T15:58:20.439Z"}
+{"level":"info","message":"GET /public/css/style.css 304 12ms","timestamp":"2016-10-25T15:58:20.442Z"}
+{"level":"info","message":"GET /public/js/modernizr.js 304 15ms","timestamp":"2016-10-25T15:58:20.447Z"}
+{"level":"info","message":"GET /public/js/jquery-2.1.1.js 304 1ms","timestamp":"2016-10-25T15:58:20.454Z"}
+{"level":"info","message":"GET /public/js/animatedModal.min.js 304 1ms","timestamp":"2016-10-25T15:58:20.462Z"}
+{"level":"info","message":"GET /public/js/main.js 304 1ms","timestamp":"2016-10-25T15:58:20.467Z"}
+{"level":"info","message":"GET /public/js/bundle.lib.js 200 6ms","timestamp":"2016-10-25T15:58:20.505Z"}
+{"level":"info","message":"GET /public/js/bundle.js 200 21ms","timestamp":"2016-10-25T15:58:20.568Z"}
+{"level":"info","message":"GET /public/img/closebt.svg 200 1ms","timestamp":"2016-10-25T15:58:20.611Z"}
+{"level":"info","message":"GET /public/img/mlogo.png 200 1ms","timestamp":"2016-10-25T15:58:20.652Z"}
+{"level":"info","message":"GET /public/fonts/AvenirNext-Heavy.woff 304 5ms","timestamp":"2016-10-25T15:58:21.115Z"}
+{"level":"info","message":"GET /public/fonts/AvenirNext-DemiBold.woff 304 5ms","timestamp":"2016-10-25T15:58:21.117Z"}
+{"level":"info","message":"GET /public/img/img-1.jpg 200 13ms","timestamp":"2016-10-25T15:58:21.126Z"}
+{"level":"info","message":"GET /public/img/img-2.jpg 200 5ms","timestamp":"2016-10-25T15:58:21.129Z"}
+{"level":"info","message":"GET /public/img/img-mobile-1.png 200 14ms","timestamp":"2016-10-25T15:58:21.133Z"}
+{"level":"info","message":"GET /public/img/img-mobile-2.png 200 10ms","timestamp":"2016-10-25T15:58:21.142Z"}
+{"level":"info","message":"GET /public/img/img-3.jpg 200 9ms","timestamp":"2016-10-25T15:58:21.151Z"}
+{"level":"info","message":"GET /public/img/img-mobile-3.png 200 7ms","timestamp":"2016-10-25T15:58:21.155Z"}
+{"level":"info","message":"GET /public/img/favicon.ico 200 2ms","timestamp":"2016-10-25T15:58:21.333Z"}
+{"level":"info","message":"GET / 304 51ms","timestamp":"2016-10-25T16:43:15.268Z"}
+{"level":"info","message":"GET /public/js/modernizr.js 304 6ms","timestamp":"2016-10-25T16:43:15.344Z"}
+{"level":"info","message":"GET /public/css/reset.css 304 4ms","timestamp":"2016-10-25T16:43:15.384Z"}
+{"level":"info","message":"GET /public/css/style.css 304 6ms","timestamp":"2016-10-25T16:43:15.387Z"}
+{"level":"info","message":"GET /public/img/closebt.svg 200 10ms","timestamp":"2016-10-25T16:43:15.919Z"}
+{"level":"info","message":"GET /public/js/jquery-2.1.1.js 304 1ms","timestamp":"2016-10-25T16:43:15.936Z"}
+{"level":"info","message":"GET /public/js/animatedModal.min.js 304 1ms","timestamp":"2016-10-25T16:43:16.082Z"}
+{"level":"info","message":"GET /public/js/main.js 304 1ms","timestamp":"2016-10-25T16:43:16.157Z"}
+{"level":"info","message":"GET /public/js/bundle.lib.js 200 2ms","timestamp":"2016-10-25T16:43:16.193Z"}
+{"level":"info","message":"GET /public/fonts/AvenirNext-DemiBold.woff 304 8ms","timestamp":"2016-10-25T16:43:16.303Z"}
+{"level":"info","message":"GET /public/fonts/AvenirNext-Heavy.woff 304 12ms","timestamp":"2016-10-25T16:43:16.307Z"}
+{"level":"info","message":"GET /public/img/mlogo.png 200 15ms","timestamp":"2016-10-25T16:43:16.313Z"}
+{"level":"info","message":"GET /public/img/img-1.jpg 200 19ms","timestamp":"2016-10-25T16:43:16.316Z"}
+{"level":"info","message":"GET /public/img/img-mobile-1.png 200 22ms","timestamp":"2016-10-25T16:43:16.321Z"}
+{"level":"info","message":"GET /public/js/bundle.js 200 126ms","timestamp":"2016-10-25T16:43:16.339Z"}
+{"level":"info","message":"GET /public/img/img-mobile-2.png 200 5ms","timestamp":"2016-10-25T16:43:16.346Z"}
+{"level":"info","message":"GET /public/img/img-2.jpg 200 5ms","timestamp":"2016-10-25T16:43:16.351Z"}
+{"level":"info","message":"GET /public/img/img-3.jpg 200 8ms","timestamp":"2016-10-25T16:43:16.353Z"}
+{"level":"info","message":"GET /public/img/img-mobile-3.png 200 14ms","timestamp":"2016-10-25T16:43:16.392Z"}
+{"level":"info","message":"GET /public/img/favicon.ico 200 31ms","timestamp":"2016-10-25T16:43:16.659Z"}
+{"level":"info","message":"GET /public/css/reset.css 304 2ms","timestamp":"2016-10-25T16:43:30.132Z"}
+{"level":"info","message":"GET /public/css/style.css 304 4ms","timestamp":"2016-10-25T16:43:30.135Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET / 200 68ms","timestamp":"2016-10-25T17:37:03.703Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/css/reset-8fb5473738.css 200 17ms","timestamp":"2016-10-25T17:37:03.734Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/js/modernizr.js 304 8ms","timestamp":"2016-10-25T17:37:03.748Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/css/style-ddb818df83.css 200 23ms","timestamp":"2016-10-25T17:37:03.751Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/js/jquery-2.1.1.js 304 1ms","timestamp":"2016-10-25T17:37:03.786Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/js/animatedModal.min.js 304 1ms","timestamp":"2016-10-25T17:37:03.808Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/js/main.js 304 1ms","timestamp":"2016-10-25T17:37:03.815Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/js/bundle-e08fb2ed3b.lib.js 200 3ms","timestamp":"2016-10-25T17:37:03.830Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/js/bundle-9e8cbc0874.js 200 9ms","timestamp":"2016-10-25T17:37:03.882Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/img/closebt.svg 200 1ms","timestamp":"2016-10-25T17:37:03.943Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/img/mlogo-f90131dd02.png 200 2ms","timestamp":"2016-10-25T17:37:03.984Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/fonts/AvenirNext-Heavy.woff 304 43ms","timestamp":"2016-10-25T17:37:04.465Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/fonts/AvenirNext-DemiBold.woff 304 6ms","timestamp":"2016-10-25T17:37:04.470Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/img/img-1-27e9745570.jpg 200 24ms","timestamp":"2016-10-25T17:37:04.474Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/img/img-2-f905d0a08b.jpg 200 25ms","timestamp":"2016-10-25T17:37:04.478Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/img/img-mobile-1-2b5e12fbcc.png 200 30ms","timestamp":"2016-10-25T17:37:04.482Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/img/img-mobile-2-ee67ab4b8e.png 200 31ms","timestamp":"2016-10-25T17:37:04.484Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/img/img-3-f36fe9ab0c.jpg 200 3ms","timestamp":"2016-10-25T17:37:04.489Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/img/img-mobile-3-34e9900eeb.png 200 17ms","timestamp":"2016-10-25T17:37:04.503Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/img/favicon-82083ca1b9.ico 200 3ms","timestamp":"2016-10-25T17:37:04.683Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET / 304 40ms","timestamp":"2016-10-25T17:54:51.921Z"}
+{"level":"info","message":"[::ffff:127.0.0.1] GET /public/img/favicon-82083ca1b9.ico 200 15ms","timestamp":"2016-10-25T17:54:52.891Z"}

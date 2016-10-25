@@ -1,34 +1,83 @@
 {
-  "name": "subcribe",
-  "version": "1.0.0",
-  "description": "API to collect invite emails.",
-  "main": "index.js",
+  "name": "node-web-kit",
+  "version": "2.2.2",
+  "description": "Node web starter kit for quick development",
+  "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "node ./bin/www",
+    "prod": "./deploy.sh",
+    "build": "gulp",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meanwise-eng/Subscriptions.git"
+    "url": "git+https://github.com/JasonBoy/node-web-kit.git"
   },
-  "author": "Punit Grover",
-  "license": "ISC",
+  "keywords": [
+    "node",
+    "web",
+    "kit",
+    "express",
+    "gulp",
+    "starter-kit"
+  ],
+  "author": "Jason Jiang <jasonlikenfs@gmail.com>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/meanwise-eng/Subscriptions/issues"
+    "url": "https://github.com/JasonBoy/node-web-kit/issues"
   },
-  "homepage": "https://github.com/meanwise-eng/Subscriptions#readme",
+  "homepage": "https://github.com/JasonBoy/node-web-kit#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "ejs-loader": "^0.3.0",
+    "bluebird": "^3.3.4",
+    "body-parser": "~1.15.1",
+    "compression": "^1.5.2",
+    "consolidate": "^0.14.1",
+    "cookie-parser": "~1.4.3",
+    "dateformat": "^1.0.12",
     "express": "^4.14.0",
+    "express-session": "^1.11.3",
+    "express-winston": "^2.0.0",
     "express-validator": "^2.20.10",
-    "mongoose": "^4.4.20",
+    "lodash": "^4.5.0",
     "nunjucks": "^2.5.2",
-    "request": "^2.72.0",
+    "request": "^2.67.0",
+    "serve-favicon": "~2.3.0",
+    "winston": "^2.1.1",
+    "winston-daily-rotate-file": "^1.1.2",
     "sendgrid": "^4.3.1",
     "sendgrid-rest": "^2.2.2"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^2.24.0",
-    "webpack": "^1.13.2"
+    "browserify": "^12.0.1",
+    "bundle-collapser": "^1.2.1",
+    "chai": "^3.5.0",
+    "del": "^1.1.1",
+    "glob": "^6.0.1",
+    "gulp": "~3.9.0",
+    "gulp-clean-css": "^2.0.7",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-rev": "^6.0.1",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.3",
+    "jquery": "^2.2.3",
+    "less": "^2.6.1",
+    "mocha": "^2.5.3",
+    "request-debug": "^0.2.0",
+    "rewire": "^2.5.1",
+    "style-loader": "^0.13.1",
+    "supertest": "^1.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-paths": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.0"
   }
 }
