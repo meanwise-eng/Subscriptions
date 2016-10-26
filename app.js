@@ -12,7 +12,6 @@ var myApp = require('./app-common');
 
 var app = myApp.init('myApp', require('./mw/logger'));
 
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
@@ -68,13 +67,14 @@ app.post('/', function (req, res) {
     request.path = '/v3/contactdb/recipients';
     
     sg.API(request, function (error, response) {
-        var data = JSON.parse(response.body);
+        var data = response.body;
         var reqs = sg.emptyRequest();
         var list_id = 665876;
-        var recipient_id = data["persisted_recipients"][0];
+        var recipient_id = data["persisted_recipients"];
         
         reqs.method = 'POST';
         reqs.path = '/v3/contactdb/lists/' + list_id + '/recipients/' + recipient_id;
+
         
         sg.API(reqs, function (error, resp) {
             err = error
@@ -117,10 +117,11 @@ app.post('/subscribe', function(req, res){
         request.method = 'POST';
         request.path = '/v3/contactdb/recipients';
         sg.API(request, function (error, response) {
-            var data = JSON.parse(response.body);
+            var data = response.body;
             var reqs = sg.emptyRequest();
             var list_id = 665876;
-            var recipient_id = data["persisted_recipients"][0];
+            var recipient_id = data["persisted_recipients"];
+            
             
             reqs.method = 'POST';
             reqs.path = '/v3/contactdb/lists/' + list_id + '/recipients/' + recipient_id;
@@ -147,3 +148,4 @@ app.post('/subscribe', function(req, res){
 myApp.handleCommonError(app);
 
 module.exports = app;
+
