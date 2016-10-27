@@ -4,13 +4,10 @@ var bodyParser = require('body-parser');
 var validator = require('express-validator');
 
 var app = express();
+var PORT = process.env.PORT || 8000;
 
 var SENDGRID_API_KEY = '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';
 var sg = require('sendgrid')(SENDGRID_API_KEY);
-
-var myApp = require('./app-common');
-
-var app = myApp.init('myApp', require('./mw/logger'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -18,6 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(validator());
 
+app.use(express.static('build'));
 
 function helloEmail(useremail){
     var helper = require('sendgrid').mail;
@@ -44,13 +42,12 @@ function send(toSend){
     requestPost.path = '/v3/mail/send';
     requestPost.body = requestBody;
     sg.API(requestPost, function (error, response) {
-        error ? console.log(error) : console.log("An email has been send to the user");
+        error ? console.log(error) : console.log("An email has been sent to the user");
     })
 }
 
-
 app.get('/', function (req, res) {
-    res.render('index');
+    res.sendFile(__dirname + '/build/views/index.html');
 });
 
 app.post('/', function (req, res) {
@@ -88,7 +85,7 @@ app.post('/', function (req, res) {
         });
     });
     
-    res.render('index');
+    res.sendFile(__dirname + '/build/views/index.html');
 });
 
 app.post('/subscribe', function(req, res){
@@ -145,7 +142,10 @@ app.post('/subscribe', function(req, res){
     }
 });
 
-myApp.handleCommonError(app);
-
-module.exports = app;
-
+app.listen(PORT, function(error) {
+    if (error) {
+        console.error(error);
+    } else {
+        console.log("Listening to port %s", PORT);
+    }
+});

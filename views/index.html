@@ -17,10 +17,9 @@
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-	<link rel="icon" href="{{ '/public/img/favicon.ico' }}" type="image/x-icon">
-	<link rel="stylesheet" href="{{ '/public/css/reset.css' }}"> <!-- CSS reset -->
-	<link rel="stylesheet" href="{{ '/public/css/style.css' }}"> <!-- Resource style -->
-	<script src="{{ '/public/js/modernizr.js' }}"></script> <!-- Modernizr -->
+	<link rel="icon" href="content/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="content/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="content/css/style.css"> <!-- Resource style -->
 
 	<title>Meanwise - Life . Work . Balance</title>
 </head>
@@ -29,7 +28,7 @@
 	<div id="modal-02">
 			<!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
 			<div  id="btn-close-modal" class="close-modal-02">
-					<img class="closebt" src="{{ '/public/img/closebt.svg' }}">
+					<img class="closebt" src="content/img/closebt.svg">
 			</div>
 
 			<div class="modal-content">
@@ -44,7 +43,7 @@
 	</div>
 
 	<header class="cd-header" data-type="slider-item">
-		<img id="logo" src="{{ '/public/img/mlogo.png' }}" />
+		<img id="logo" src="content/img/mlogo.png" />
 		<a id="demo02" href="#modal-02">Request Invite</a>
 		<h1>Life . Work . Balance
 			<br><span id="launch">Launching Fall 2016</span>
@@ -77,32 +76,27 @@
 
 	<div id="foot"><h2>© Meanwise, Inc.</h2></div>
 
-	<script src="{{ '/public/js/jquery-2.1.1.js' }}"></script>
-	<script src="{{ '/public/js/animatedModal.min.js'}}"></script>
-	<script src="{{ '/public/js/main.js' }}"></script> <!-- Resource jQuery -->
+	<script src="content/js/bundle.js"></script>
 	<script>
+		function subscribe(event) {
+			event.preventDefault();
+			var email = $('.email')[0];
+			$('.err')[0].innerHTML = "Please Wait...";
 
-	function subscribe(event) {
-		event.preventDefault();
-		var email = $('.email')[0];
-		$('.err')[0].innerHTML = "Please Wait...";
-
-		$.ajax({ 
-			url: '/subscribe',
-			type: 'POST',
-			cache: false, 
-			data: { email: email.value },
-			success: function(data){
-				email.value = '';
-				$('.err')[0].innerHTML = data.message;
-			},
-			error: function(data){
-				$('.err')[0].innerHTML = data.message;
-			}
-        });
-	}
+			$.ajax({ 
+				url: '/subscribe',
+				type: 'POST',
+				cache: false, 
+				data: { email: email.value },
+				success: function(data){
+					email.value = '';
+					$('.err')[0].innerHTML = data.message;
+				},
+				error: function(data){
+					$('.err')[0].innerHTML = data.message;
+				}
+	        });
+		}
 	</script>
-	<script src="{{ '/public/js/bundle.lib.js' }}"></script>
-	<script src="{{ '/public/js/bundle.js' }}"></script>
 </body>
 </html>

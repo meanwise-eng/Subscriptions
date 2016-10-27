@@ -22,14 +22,14 @@ gulp.task('watch', function () {
   gulp.start('css.watch', 'js.watch');
 });
 //init the static assets without watch tasks
-gulp.task('init', ['css', 'js', 'js.lib'], function () {
+gulp.task('init', ['css', 'js'], function () {
   return new Promise(function (resole) {
     gutil.log('Initializing static assets finished.');
     resole(true);
   });
 });
 //should for prod
-gulp.task('assets', ['css', 'js', 'js.lib', 'img', 'html', 'font'], function () {
+gulp.task('assets', ['css', 'js', 'img', 'html', 'font'], function () {
   gulp.start('rev');
 });
 // Default task
