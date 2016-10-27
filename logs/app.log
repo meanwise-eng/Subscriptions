@@ -109,3 +109,9 @@
 {"level":"info","message":"Node proxy[127.0.0.1:3001] enabled for path: /prefix","timestamp":"[2016-10-26 18:33:30]"}
 {"level":"info","message":"Node proxy[127.0.0.1:3002] enabled for path: /prefix2","timestamp":"[2016-10-26 18:33:30]"}
 {"level":"info","message":"Express server[prod] listening port 3000","timestamp":"[2016-10-26 18:33:30]"}
+{"level":"info","message":"Node proxy[127.0.0.1:3001] enabled for path: /prefix","timestamp":"[2016-10-27 06:21:58]"}
+{"level":"info","message":"Node proxy[127.0.0.1:3002] enabled for path: /prefix2","timestamp":"[2016-10-27 06:21:58]"}
+{"level":"info","message":"Express server[prod] listening port 3000","timestamp":"[2016-10-27 06:21:58]"}
+{"level":"info","message":"Node proxy[127.0.0.1:3001] enabled for path: /prefix","timestamp":"[2016-10-27 06:29:32]"}
+{"level":"info","message":"Node proxy[127.0.0.1:3002] enabled for path: /prefix2","timestamp":"[2016-10-27 06:29:32]"}
+{"level":"info","message":"Express server[prod] listening port 5000","timestamp":"[2016-10-27 06:29:32]"}
