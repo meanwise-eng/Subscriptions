@@ -5,6 +5,10 @@
   "fonts/AvenirNext-Heavy.css": "fonts/AvenirNext-Heavy-b6c48756e4.css",
   "fonts/AvenirNext-Medium.css": "fonts/AvenirNext-Medium-7508ae6aab.css",
   "fonts/AvenirNext-Regular.css": "fonts/AvenirNext-Regular-09092521ac.css",
+  "img/camp1.jpg": "img/camp1-ed8c0bc989.jpg",
+  "img/camp2.jpg": "img/camp2-b50cc64763.jpg",
+  "img/camp3.jpg": "img/camp3-6ea5155147.jpg",
+  "img/camp4.jpg": "img/camp4-6ab38c5473.jpg",
   "img/favicon.ico": "img/favicon-82083ca1b9.ico",
   "img/img-1.jpg": "img/img-1-27e9745570.jpg",
   "img/img-2.jpg": "img/img-2-f905d0a08b.jpg",
@@ -18,6 +22,7 @@
   "img/img-mobile-3.jpg": "img/img-mobile-3-0c0f1520b9.jpg",
   "img/img-mobile-3.png": "img/img-mobile-3-34e9900eeb.png",
   "img/img-mobile-4.jpg": "img/img-mobile-4-d8eabfce19.jpg",
+  "img/logo.png": "img/logo-09e4c9e482.png",
   "img/meanw.png": "img/meanw-e4e5fa1538.png",
   "img/mlogo.png": "img/mlogo-f90131dd02.png",
   "js/bundle.js": "js/bundle-03974dc9f8.js"
