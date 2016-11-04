@@ -50,6 +50,10 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/build/views/index.html');
 });
 
+app.get('/campus', function (req, res) {
+    res.sendFile(__dirname + '/build/views/campus.html');
+});
+
 app.post('/', function (req, res) {
     var email = req.body.email;
     console.log(email);
