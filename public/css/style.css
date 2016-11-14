@@ -149,8 +149,9 @@ Main Components
 	padding-top: 20px;
 	background: rgba(0, 0, 0, .05);
 }
-#invite-form input {
+#emailAdd {
 	width: 80%;
+	text-align: center;
 	background: none;
 	font-size: 24px;
 	border: none;
@@ -158,9 +159,8 @@ Main Components
 	color: white;
 	font-weight: 100;
 	padding: 10px 0;
-  text-align: center;
 }
-#invite-form button {
+#SubscribeEmail {
 	border: none;
 	background: none;
 	color: white;
@@ -317,7 +317,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	.modal-content h1 {
 		font-size: 48px;
 	}
-	#invite-form input {
+	#SubsribeForm1 input {
 		width: 35%;
 		font-size: 32px;
 	}
@@ -418,6 +418,32 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   .cd-vertical-nav {
     display: block;
   }
+}
+
+@media only screen and (max-width: 900px) {
+  .section h1 {
+		font-size: 36px;
+		line-height: 50px;
+	}
+	#char h1 {
+		font-size: 36px!important;
+	}
+	#char p {
+		font-size: 13px!important;
+	}
+	#requirements h3 {
+		font-size: 16px!important;
+	}
+	#requirements h1 {
+		margin-bottom: 30px!important;
+	}
+	#expected h3 {
+		font-size: 16px!important;
+		margin-bottom: 20px!important;
+	}
+	#expected h1 {
+		margin-bottom: 30px!important;
+	}
 }
 
 .no-js .cd-vertical-nav {
