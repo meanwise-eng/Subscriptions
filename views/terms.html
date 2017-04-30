@@ -1,0 +1,156 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Meanwise</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="Meanwise" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://meanwise.com" />
+        <meta property="og:image" content="content/img/og.png" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+
+        <link rel="apple-touch-icon" href="/content/apple-touch-icon.png">
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+        <link rel="stylesheet" href="/content/css/normalize.min.css">
+        <link rel="stylesheet" href="/content/css/main.css">
+
+    </head>
+    <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="modal-02">
+        <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+        <div  id="btn-close-modal" class="close-modal-02">
+                <img class="closebt" src="content/img/closebt.svg">
+        </div>
+
+        <div class="modal-content">
+            <h1>Request early invite</h1>
+            <form id="SubsribeForm1" onSubmit="subscribe(event)">
+                <input id="emailAdd" type="text" name="email" placeholder="Please enter your email" />
+                <p class="err"></p>
+                
+                <button id="SubscribeEmail">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <div class="main-nav">
+                <ul class="main-nav-list">
+                  <li class="main-nav-list-item"><a href="/">Get Meanwise</a></li>
+                  <li class="main-nav-list-item"><a href="https://medium.com/@meanwise">Blog</a></li>
+                  <li class="main-nav-list-item"><a href="/contact">Contact</a></li>
+                  <li class="main-nav-list-item invite"><a id="demo02" href="#modal-02">Request an Invite</a></li>
+                </ul>
+            </div>
+            <h1 class="title">
+              <a class="logo" href="/"><img src="content/img/logo.svg"></a>
+            </h1>
+        </header>
+    </div>
+
+
+        <div class="page main-container">
+            <div class="main wrapper clearfix">
+              <h1>Terms of Service</h1>
+              <h3>1. Terms</h3>
+
+              <p>By accessing the website at http://meanwise.com, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.
+              </p>
+              <h3>2. Use License</h3>
+
+              <h4>a - Permission is granted to temporarily download one copy of the materials (information or software) on Meanwise, Inc.'s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+              </h4>
+              <ul>
+                <li>modify or copy the materials;</li>
+                <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+                <li>attempt to decompile or reverse engineer any software contained on Meanwise, Inc.'s website;</li>
+                <li>remove any copyright or other proprietary notations from the materials; or</li>
+              <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+            </ul>
+              <h4>b - This license shall automatically terminate if you violate any of these restrictions and may be terminated by Meanwise, Inc. at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</h4>
+
+              <h3>3. Disclaimer</h3>
+
+              <p>The materials on Meanwise, Inc.'s website are provided on an 'as is' basis. Meanwise, Inc. makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+              Further, Meanwise, Inc. does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
+            </p>
+              <h3>4. Limitations</h3>
+
+              <p>In no event shall Meanwise, Inc. or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Meanwise, Inc.'s website, even if Meanwise, Inc. or a Meanwise, Inc. authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+              </p>
+              <h3>5. Accuracy of materials</h3>
+
+              <p>The materials appearing on Meanwise, Inc.'s website could include technical, typographical, or photographic errors. Meanwise, Inc. does not warrant that any of the materials on its website are accurate, complete or current. Meanwise, Inc. may make changes to the materials contained on its website at any time without notice. However Meanwise, Inc. does not make any commitment to update the materials.
+              </p>
+              <h3>6. Links</h3>
+
+              <p>Meanwise, Inc. has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Meanwise, Inc. of the site. Use of any such linked website is at the user's own risk.
+              </p>
+              <h3>7. Modifications</h3>
+
+              <p>Meanwise, Inc. may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.
+              </p>
+              <h3>8. Governing Law</h3>
+
+              <p>These terms and conditions are governed by and construed in accordance with the laws of California and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
+              </p>
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="content/js/bundle.js"><\/script>')</script>
+
+        <script src="/content/js/bundle.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+
+            function subscribe(event) {
+              event.preventDefault();
+              var email = $('#emailAdd')[0];
+              $('.err')[0].innerHTML = "Please Wait...";
+
+              $.ajax({ 
+                  url: '/subscribe',
+                  type: 'POST',
+                  cache: false, 
+                  data: { email: email.value },
+                  success: function(data){
+                      email.value = '';
+                      $('.err')[0].innerHTML = data.message;
+                  },
+                  error: function(data){
+                      $('.err')[0].innerHTML = data.message;
+                  }
+              });
+          }
+        </script>
+    </body>
+</html>

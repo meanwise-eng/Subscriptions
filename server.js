@@ -50,8 +50,16 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/build/views/index.html');
 });
 
-app.get('/campus', function (req, res) {
-    res.sendFile(__dirname + '/build/views/campus.html');
+app.get('/contact', function (req, res) {
+    res.sendFile(__dirname + '/build/views/contact.html');
+});
+
+app.get('/privacy', function (req, res) {
+    res.sendFile(__dirname + '/build/views/privacy.html');
+});
+
+app.get('/terms', function (req, res) {
+    res.sendFile(__dirname + '/build/views/terms.html');
 });
 
 app.post('/', function (req, res) {

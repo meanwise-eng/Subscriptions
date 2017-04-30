@@ -1,0 +1,753 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+@font-face
+{
+    font-family: 'proxima_nova_thextrabold';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/mark_simonson_-_proxima_nova_extrabold-webfont.woff2') format('woff2'),
+    url('../fonts/mark_simonson_-_proxima_nova_extrabold-webfont.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'proxima_nova_ltlight';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/mark_simonson_-_proxima_nova_light-webfont.woff2') format('woff2'),
+    url('../fonts/mark_simonson_-_proxima_nova_light-webfont.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'proxima_nova_rgregular';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/mark_simonson_-_proxima_nova_regular-webfont.woff2') format('woff2'),
+    url('../fonts/mark_simonson_-_proxima_nova_regular-webfont.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'proxima_nova_ltsemibold';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/mark_simonson_-_proxima_nova_semibold-webfont.woff2') format('woff2'),
+    url('../fonts/mark_simonson_-_proxima_nova_semibold-webfont.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'proxima_nova_ththin';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/mark_simonson_-_proxima_nova_thin-webfont.woff2') format('woff2'),
+    url('../fonts/mark_simonson_-_proxima_nova_thin-webfont.woff') format('woff');
+}
+
+html
+{
+    font-size: 1em;
+    line-height: 1.4;
+
+    color: #222;
+
+    text-rendering: optimizeLegibility;
+    height: 100%;
+}
+
+::-moz-selection
+{
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection
+{
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr
+{
+    display: block;
+
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
+
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+{
+    vertical-align: middle;
+}
+
+fieldset
+{
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+textarea
+{
+    resize: vertical;
+}
+
+.browserupgrade
+{
+    margin: .2em 0;
+    padding: .2em 0;
+
+    color: #000;
+    background: #ccc;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body
+{
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font-family: 'proxima_nova_rgregular';
+
+    background-image: -webkit-linear-gradient(bottom, #4481eb 0%, #04befe 100%);
+    background-image:         linear-gradient(to top, #4481eb 0%, #04befe 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.wrapper
+{
+    width: 90%;
+    margin: 0 5%;
+}
+
+.wrapper-2
+{
+    width: 50%;
+    margin: auto;
+
+    text-align: center;
+}
+
+.main-nav
+{
+    text-align: center;
+}
+
+.main-nav-list
+{
+    list-style: none;
+}
+
+.main-nav-list-item
+{
+    display: inline-block;
+
+    padding: 0 15px;
+
+    text-transform: uppercase;
+}
+
+.main-nav-list-item.invite
+{
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(left, #6a11cb 0%, #2575fc 100%);
+    background-image:         linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.title
+{
+    margin: 30px 0;
+
+    text-align: center;
+}
+
+.main-nav-list:first-child
+{
+    padding-left: 0;
+}
+
+.main-nav-list-item a
+{
+    font-size: 12px;
+
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    color: white;
+}
+
+.phone
+{
+    position: relative;
+
+    float: left;
+
+    width: 250px;
+    height: 503px;
+    margin-right: 30px;
+
+    background-image: url('../img/phone.png');
+    background-size: 100%;
+}
+
+.phone video
+{
+    position: absolute;
+    top: 58px;
+    left: 15px;
+
+    width: 219px;
+    height: 388px;
+}
+
+.title-text
+{
+    font-family: 'proxima_nova_ththin';
+    font-size: 24px;
+    line-height: 35px;
+
+    padding-top: 30px;
+    padding-left: 30px;
+
+    text-align: left;
+    letter-spacing: 1.5px;
+
+    color: white;
+}
+
+.appstore-badge
+{
+    float: left;
+
+    margin-top: 15px;
+}
+
+.footer-container
+{
+    text-align: center;
+}
+
+.footer-container a
+{
+    font-family: 'proxima_nova_ththin';
+
+    display: inline-block;
+
+    padding: 30px 15px;
+
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    color: white;
+}
+
+.page
+{
+    color: white;
+}
+
+.page h1
+{
+    font-family: 'proxima_nova_rgregular';
+
+    letter-spacing: 1px;
+}
+
+.page h2
+{
+    letter-spacing: 1px;
+}
+
+.page p
+{
+    font-family: 'proxima_nova_ththin';
+}
+
+.page.contact
+{
+    text-align: center;
+}
+
+.email-btn
+{
+    font-family: 'proxima_nova_ltsemibold';
+    font-size: 18px;
+
+    display: inline-block;
+
+    margin: 30px 0;
+    padding: 12px 60px;
+
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    color: #6cf;
+    border-radius: 50px;
+    background: white;
+}
+
+.page ul li
+{
+    font-family: 'proxima_nova_ththin';
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title
+{
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px)
+{
+    /* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+
+
+    /* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+}
+
+@media only screen and (max-width: 768px)
+{
+    /* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .main-nav-list-item a
+    {
+        font-size: 10px;
+
+        text-decoration: none;
+        letter-spacing: 2px;
+
+        color: white;
+    }
+
+    .phone
+    {
+        float: none;
+
+        margin: auto;
+    }
+
+    .wrapper-2
+    {
+        width: 90%;
+    }
+
+    .title-text
+    {
+        font-size: 22px;
+
+        margin: 40px 0;
+        padding: 0 15px;
+
+        text-align: center;
+    }
+
+    .appstore-badge
+    {
+        float: none;
+
+        margin-bottom: 25px;
+    }
+
+    .title
+    {
+        margin-bottom: 40px;
+    }
+
+    .title img
+    {
+        width: 65px;
+    }
+
+    /* ============
+    WIDE: Menu
+   ============ */
+
+
+
+    /* ============
+    WIDE: Main
+   ============ */
+}
+
+@media only screen and (min-width: 1140px)
+{
+    /* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper
+    {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden
+{
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden
+{
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    border: 0;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus
+{
+    position: static;
+
+    overflow: visible;
+    clip: auto;
+
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.invisible
+{
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after
+{
+    display: table;
+
+    content: ' ';
+}
+
+.clearfix:after
+{
+    clear: both;
+}
+
+.clearfix
+{
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print
+{
+    *,
+    *:before,
+    *:after
+    {
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited
+    {
+        text-decoration: underline;
+    }
+
+    a[href]:after
+    {
+        content: ' (' attr(href) ')';
+    }
+
+    abbr[title]:after
+    {
+        content: ' (' attr(title) ')';
+    }
+
+    a[href^='#']:after,
+    a[href^='javascript:']:after
+    {
+        content: '';
+    }
+
+    pre,
+    blockquote
+    {
+        border: 1px solid #999;
+
+        page-break-inside: avoid;
+    }
+
+    thead
+    {
+        display: table-header-group;
+    }
+
+    tr,
+    img
+    {
+        page-break-inside: avoid;
+    }
+
+    img
+    {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3
+    {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3
+    {
+        page-break-after: avoid;
+    }
+}
+
+/*Slideer*/
+
+.closebt:hover
+{
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+.closebt
+{
+    cursor: pointer;
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+}
+
+#btn-close-modal
+{
+    padding: 30px;
+
+    text-align: center;
+}
+
+.modal-content
+{
+    position: relative;
+    top: 25%;
+
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    text-align: center;
+}
+.modal-content h1
+{
+    font-family: 'proxima_nova_thextrabold';
+    font-size: 28px;
+    font-weight: 900;
+
+    margin-bottom: 60px;
+
+    color: white;
+}
+
+#modal-02
+{
+    background-image: -webkit-linear-gradient(315deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
+    background-image:         linear-gradient(-225deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
+}
+
+#emailAdd
+{
+    font-size: 24px;
+    font-weight: 100;
+
+    width: 80%;
+    padding: 10px 0;
+
+    text-align: center;
+
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: none;
+}
+
+#SubscribeEmail
+{
+    font-family: 'proxima_nova_thextrabold';
+    font-size: 24px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    color: white;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+{
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+            transition: background-color 5000s ease-in-out 0s;
+
+    background-color: transparent;
+
+    -webkit-text-fill-color: white;
+}
+
+.err
+{
+    font-family: 'proxima_nova_ththin';
+    font-size: 14px;
+    font-weight: normal;
+
+    margin: 15px;
+    margin-bottom: 30px;
+
+    color: white;
+}
+
+@media only screen and (min-width: 768px)
+{
+    .modal-content h1
+    {
+        font-size: 48px;
+    }
+    #SubsribeForm1 input
+    {
+        font-size: 32px;
+
+        width: 35%;
+    }
+    #demo02
+    {
+        left: 50%;
+    }
+}
+
+/*Placeholder*/
+
+#emailAdd::-webkit-input-placeholder
+{
+    font-family: 'proxima_nova_ltlight', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+
+    color: white;
+}
+
+#emailAdd:-ms-input-placeholder
+{
+    font-family: 'proxima_nova_ltlight', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+
+    color: white;
+}
+
+#emailAdd:-moz-placeholder
+{
+    font-family: 'proxima_nova_ltlight', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+
+    color: white;
+}
+
+#emailAdd::-moz-placeholder
+{
+    font-family: 'proxima_nova_ltlight', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+
+    color: white;
+}
