@@ -2,8 +2,8 @@ jQuery(document).ready(function($){
 
     $("#demo02").animatedModal({
             modalTarget:'modal-02',
-            animatedIn:'fadeInUpBig',
-            animatedOut:'fadeOutDownBig',
+            animatedIn:'fadeInDownBig',
+            animatedOut:'fadeOutUpBig',
             // Callbacks
             beforeOpen: function() {
                     console.log("The animation was called");
