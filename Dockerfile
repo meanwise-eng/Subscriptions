@@ -1,11 +1,9 @@
 FROM node:7.9.0
 
-RUN mkdir -p /usr/app
+RUN mkdir -p /app
 
-COPY ./ /usr/app/
+RUN cd /app && yarn global add gulp && yarn install
 
-RUN cd /usr/app && yarn global add gulp && yarn install
-
-WORKDIR /usr/app
+WORKDIR /app
 
 CMD ["yarn", "start"]

@@ -1,9 +1,9 @@
 version: "2"
 
 services:
- web:
+ app:
     build: .
     volumes:
-      - .:/usr/app/
+      - .:/app/
     ports:
       - "8000:8000"
