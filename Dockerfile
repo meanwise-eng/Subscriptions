@@ -1,15 +1,11 @@
 FROM node:7.9.0
 
-RUN apt-get update
+RUN mkdir -p /usr/app
 
-COPY package.json /tmp/package.json
+COPY ./ /usr/app/
 
-RUN yarn global add gulp
-
-RUN cd /tmp && yarn install
-
-RUN mkdir -p /usr/app && cp -a /tmp/node_modules /usr/app
+RUN cd /usr/app && yarn global add gulp && yarn install
 
 WORKDIR /usr/app
 
-COPY ./ /usr/app/
+CMD ["yarn", "start"]
