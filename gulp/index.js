@@ -6,3 +6,4 @@ require('./less-task');
 require('./scss-task');
 require('./html-task');
 require('./font-task');
+require('./ejs-task');

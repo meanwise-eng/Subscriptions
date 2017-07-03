@@ -2,6 +2,7 @@ var express = require('express');
 
 var bodyParser = require('body-parser');
 var validator = require('express-validator');
+var axios = require('axios');
 
 var app = express();
 var PORT = process.env.PORT || 8000;
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(validator());
 
+app.set('view engine', 'ejs');
 app.use(express.static('build'));
 
 function helloEmail(useremail){
@@ -63,12 +65,27 @@ app.get('/terms', function (req, res) {
 });
 
 app.get('/post', function (req, res) {
-    res.sendFile(__dirname + '/build/views/post.html');
+    const postId = req.param('post');
+    let data = [];
+    if (postId) {
+        axios({
+            method: 'get',
+            url: `http://ec2-54-159-112-138.compute-1.amazonaws.com:8000/api/v4/post/${postId}`,
+            headers: {
+                'Authorization': 'Token f684ba596e8f6e09a3f295f76a3d72d6d4e6b8db',
+            }
+        }).then(res => {
+            data = res.data;
+            console.log(data.user_profile_photo);
+        }).catch(errors => {
+            console.log(errors);
+        });
+    }
+    res.render(__dirname +'/build/views/post', {data: data});
 });
 
 app.post('/', function (req, res) {
     var email = req.body.email;
-    console.log(email);
     var request = sg.emptyRequest();
     request.body = [
         {
