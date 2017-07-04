@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 app.use(validator());
 
 app.set('view engine', 'ejs');
-app.use(express.static('build'));
+app.use(express.static('public'));
 
 function helloEmail(useremail){
     var helper = require('sendgrid').mail;
@@ -66,7 +66,7 @@ app.get('/terms', function (req, res) {
 
 app.get('/post', function (req, res) {
     const postId = req.param('post');
-    let data = [];
+    let data;
     if (postId) {
         axios({
             method: 'get',
@@ -74,14 +74,15 @@ app.get('/post', function (req, res) {
             headers: {
                 'Authorization': 'Token f684ba596e8f6e09a3f295f76a3d72d6d4e6b8db',
             }
-        }).then(res => {
-            data = res.data;
+        }).then(resp => {
+            data = resp.data;
             console.log(data.user_profile_photo);
+            res.render(__dirname +'/views/post', {data: data});
         }).catch(errors => {
             console.log(errors);
+            res.render(__dirname +'/views/post', {data: data});
         });
     }
-    res.render(__dirname +'/build/views/post', {data: data});
 });
 
 app.post('/', function (req, res) {

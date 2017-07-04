@@ -88,8 +88,36 @@
         </header>
     </div>
 
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <%if (typeof data != null) { %>
+                    <div class="post-content col-6 col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                        <img class="post" src="<%= data.user_profile_photo%>">
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <img class="user-profile-photo" src="<%= data.user_profile_photo %>">
+                                <span class="col"><span class="name"><%= data.user_firstname%> <%= data.user_lastname%></span> <span class="username">@<%= data.user_firstname%></span><span class="col"><%= data.user_profession_text%></span></span>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12 caption">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                <p class="date">12 January 2017</p>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12">
+                                <div id="manualAction"></div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
     <div id="postDetails">
-        <h1></h1></div>
+        <h1></h1>
+    </div>
     <div id="manualAction"></div>
     <div class="footer-container">
         <footer class="wrapper">

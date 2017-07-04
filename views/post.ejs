@@ -17,86 +17,53 @@
     <meta property="og:image:height" content="300" />
     <link rel="apple-touch-icon" href="/content/apple-touch-icon.png">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
-    <link rel="stylesheet" href="/content/css/normalize.min.css">
-    <link rel="stylesheet" href="/content/css/main.css">
-    <style>
-    .myButton {
-        background-color: #6a11cb;
-        border-radius: 999em;
-        height: auto;
-        display: inline-block;
-        cursor: pointer;
-        color: #ffffff;
-        font-family: Arial;
-        font-size: 17px;
-        padding: 16px 31px;
-        text-decoration: none;
-    }
-    
-    .myButton:hover {
-        background-color: #7b36c5;
-    }
-    
-    .myButton:active {
-        position: relative;
-        top: 1px;
-    }
-    
-    #postDetails {
-        text-align: center;
-        margin-top: 100px;
-        color: #fff;
-    }
-    
-    #manualAction {
-        padding: 40px;
-    }
-    </style>
+    <link rel="stylesheet" href="/css/normalize.min.css">
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/font.css">
 </head>
 
 <body>
-    <div id="modal-02">
-        <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
-        <div  id="btn-close-modal" class="close-modal-02">
-                <img class="closebt" src="content/img/closebt.svg">
+    <nav>
+        <a href="/">
+            <img class="logo" src="/img/icon.svg">
+        </a>
+        <ul>
+            <li>Get Meanwise</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div class="content-container">
+        <div class="wrapper">
+            <%if (typeof data != null) { %>
+                <div class="image-wrapper">
+                    <% if (data.video_thumb_url != "") { %>
+                        <img class="image" src="<%= data.video_thumb_url %>" alt="Image">
+                    <% } %>
+                    <% if (data.image_url != "") { %>
+                        <img class="image" src="<%= data.image_url %>" alt="Image">
+                    <% } %>
+                </div>
+                <div class="content">
+                    <div class="content__details">
+                        <div class="user">
+                            <img src="<%= data.user_profile_photo_small %>" alt="<%= data.user_firstname %>">
+                        </div>
+                        <div class="userdetails">
+                            <span class="username">@<%= data.user_firstname %></span>
+                            <span><%= data.user_firstname %> <%= data.user_lastname %></span>
+                        </div>
+                    </div>
+                    <div class="content__main">
+                        <span class="text"><%= data.text %></span>
+                    </div>
+                </div>
+            <% } %>
         </div>
-
-        <div class="modal-content">
-            <h1>Request early invite</h1>
-            <form id="SubsribeForm1" onSubmit="subscribe(event)">
-                <input id="emailAdd" type="text" name="email" placeholder="Please enter your email" />
-                <p class="err"></p>
-                
-                <button id="SubscribeEmail">Submit</button>
-            </form>
-        </div>
     </div>
 
-    <div class="header-container">
-        <header class="wrapper clearfix">
-            <div class="main-nav">
-                <ul class="main-nav-list">
-                  <li class="main-nav-list-item"><a href="/">Get Meanwise</a></li>
-                  <li class="main-nav-list-item"><a href="https://medium.com/@meanwise">Blog</a></li>
-                  <li class="main-nav-list-item"><a href="/contact">Contact</a></li>
-                  <li class="main-nav-list-item invite"><a id="demo02" href="#modal-02">Request an Invite</a></li>
-                </ul>
-            </div>
-            <h1 class="title">
-              <a class="logo" href="/"><img src="content/img/logo.svg"></a>
-            </h1>
-        </header>
-    </div>
-
-    <div id="postDetails">
-        <h1></h1></div>
-    <div id="manualAction"></div>
-    <div class="footer-container">
-        <footer class="wrapper">
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
-        </footer>
-    </div>
+    <div class="footer"></div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="content/js/bundle.js"><\/script>')</script>
@@ -112,28 +79,8 @@
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 
-        function subscribe(event) {
-          event.preventDefault();
-          var email = $('#emailAdd')[0];
-          $('.err')[0].innerHTML = "Please Wait...";
-
-          $.ajax({ 
-              url: '/subscribe',
-              type: 'POST',
-              cache: false, 
-              data: { email: email.value },
-              success: function(data){
-                  email.value = '';
-                  $('.err')[0].innerHTML = data.message;
-              },
-              error: function(data){
-                  $('.err')[0].innerHTML = data.message;
-              }
-          });
-        }
 
         var postid = location.search.split("post=").splice(1).join("").split("&")[0];
-        document.getElementById("postDetails").innerHTML = "<h1>FEED ID #" + postid + "</h1>";
         document.getElementById("manualAction").innerHTML=  "<center><a href='meanwise://post/"+postid+"' class='myButton'>Open in App</a></center>"
     </script>
 </body>
