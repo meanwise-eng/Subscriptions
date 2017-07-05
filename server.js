@@ -85,7 +85,6 @@ app.get('/post', function (req, res) {
                 }
             }).then(response => {
                 comments = response.data.result;
-                console.log(comments);
             }).catch(errors => {
                 console.log(errors);
             });
