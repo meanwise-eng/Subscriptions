@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 app.use(validator());
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use(express.static('build'));
 
 function helloEmail(useremail){
     var helper = require('sendgrid').mail;
@@ -77,7 +77,6 @@ app.get('/post', function (req, res) {
             }
         }).then(resp => {
             data = resp.data;
-            console.log(data.user_profile_photo);
             axios({
                 method: 'get',
                 url: `http://ec2-54-159-112-138.compute-1.amazonaws.com:8000/api/v4/posts/${postId}/comments/`,
@@ -85,16 +84,18 @@ app.get('/post', function (req, res) {
                     'Authorization': 'Token f684ba596e8f6e09a3f295f76a3d72d6d4e6b8db',
                 }
             }).then(response => {
-                comments = response.data.results;
+                comments = response.data.result;
                 console.log(comments);
             }).catch(errors => {
                 console.log(errors);
             });
-            res.render(__dirname +'/views/post', {data: data, comments: comments});
+            res.render(__dirname +'/build/views/post', {post: data, comments: comments});
         }).catch(errors => {
-            console.log(errors);
-            res.render(__dirname +'/views/post', {data: data, comments: comments});
+            res.render(__dirname +'/build/views/404');
         });
+    }
+    else {
+        res.render(__dirname +'/build/views/404');
     }
 });
 

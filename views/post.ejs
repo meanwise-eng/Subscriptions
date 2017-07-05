@@ -16,16 +16,16 @@
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
     <link rel="apple-touch-icon" href="/content/apple-touch-icon.png">
-    <link rel="stylesheet" href="/css/normalize.min.css">
+    <link rel="stylesheet" href="/content/css/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/content/css/font.css">
+    <link rel="stylesheet" href="/content/css/post.css">
 </head>
 
 <body>
     <nav>
         <a href="/">
-            <img class="logo" src="/img/icon.svg">
+            <img class="logo" src="content//img/icon.svg">
         </a>
         <ul>
             <li>Get Meanwise</li>
@@ -33,41 +33,39 @@
             <li>Contact</li>
         </ul>
     </nav>
-
-    <%if (typeof data != null) { %>
+    <%if (post) { %>
         <div class="post-wrapper">
             <div class="image-wrapper">
-                <% if (data.video_thumb_url != "") { %>
-                    <img class="image" src="<%= data.video_thumb_url %>" alt="Image">
+                <% if (post.video_thumb_url != "") { %>
+                    <img class="image" src="<%= post.video_thumb_url %>" alt="Image">
                 <% } %>
-                <% if (data.image_url != "") { %>
-                    <img class="image" src="<%= data.image_url %>" alt="Image">
+                <% if (post.image_url != "") { %>
+                    <img class="image" src="<%= post.image_url %>" alt="Image">
                 <% } %>
             </div>
             <div class="post">
                 <div class="post__details">
                     <div class="user">
-                        <img src="<%= data.user_profile_photo_small %>" alt="<%= data.user_firstname %>">
+                        <img src="<%= post.user_profile_photo_small %>" alt="<%= post.user_firstname %>">
                     </div>
                     <div class="userdetails">
-                        <span class="username">@<%= data.user_firstname %></span>
-                        <span><%= data.user_firstname %> <%= data.user_lastname %></span>
+                        <span class="username">@<%= post.user_firstname %></span>
+                        <span><%= post.user_firstname %> <%= post.user_lastname %></span>
                     </div>
                 </div>
                 <div class="post__main">
                     <span class="likes">
                         <i class="fa fa-heart" aria-hidden="true"> </i>
-                        <% if (data.num_likes <= 1) { %>
-                            <%= data.num_likes %> Like
-                        <% } %>
-                        <% if (data.num_likes > 1) { %>
-                            <%= data.num_likes %> Likes
+                        <% if (post.num_likes <= 1) { %>
+                            <%= post.num_likes %> Like
+                        <% } else{ %>
+                            <%= post.num_likes %> Likes
                         <% } %>
                     </span>
-                    <span class="text"><%= data.text %></span>
+                    <span class="text"><%= post.text %></span>
                 </div>
                 
-                <a class="download"href="https://itunes.apple.com/us/app/meanwise/id1159671281?mt=8">
+                <a class="download" href="https://itunes.apple.com/us/app/meanwise/id1159671281?mt=8">
                     Open in app
                 </a>
             </div>
@@ -88,7 +86,7 @@
 
 
         var postid = location.search.split("post=").splice(1).join("").split("&")[0];
-        document.getElementById("manualAction").innerHTML=  "<center><a href='meanwise://post/"+postid+"' class='myButton'>Open in App</a></center>"
+        document.querySelector(".download").href =  "meanwise://post/" + postid
     </script>
 </body>
 
