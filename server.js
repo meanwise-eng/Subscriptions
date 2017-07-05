@@ -67,6 +67,7 @@ app.get('/terms', function (req, res) {
 app.get('/post', function (req, res) {
     const postId = req.param('post');
     let data;
+    let comments;
     if (postId) {
         axios({
             method: 'get',
@@ -77,10 +78,22 @@ app.get('/post', function (req, res) {
         }).then(resp => {
             data = resp.data;
             console.log(data.user_profile_photo);
-            res.render(__dirname +'/views/post', {data: data});
+            axios({
+                method: 'get',
+                url: `http://ec2-54-159-112-138.compute-1.amazonaws.com:8000/api/v4/posts/${postId}/comments/`,
+                headers: {
+                    'Authorization': 'Token f684ba596e8f6e09a3f295f76a3d72d6d4e6b8db',
+                }
+            }).then(response => {
+                comments = response.data.results;
+                console.log(comments);
+            }).catch(errors => {
+                console.log(errors);
+            });
+            res.render(__dirname +'/views/post', {data: data, comments: comments});
         }).catch(errors => {
             console.log(errors);
-            res.render(__dirname +'/views/post', {data: data});
+            res.render(__dirname +'/views/post', {data: data, comments: comments});
         });
     }
 });
