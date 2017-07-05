@@ -16,10 +16,10 @@
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
     <link rel="apple-touch-icon" href="/content/apple-touch-icon.png">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
     <link rel="stylesheet" href="/css/normalize.min.css">
-    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/post.css">
 </head>
 
 <body>
@@ -34,43 +34,50 @@
         </ul>
     </nav>
 
-    <div class="content-container">
-        <div class="wrapper">
-            <%if (typeof data != null) { %>
-                <div class="image-wrapper">
-                    <% if (data.video_thumb_url != "") { %>
-                        <img class="image" src="<%= data.video_thumb_url %>" alt="Image">
-                    <% } %>
-                    <% if (data.image_url != "") { %>
-                        <img class="image" src="<%= data.image_url %>" alt="Image">
-                    <% } %>
-                </div>
-                <div class="content">
-                    <div class="content__details">
-                        <div class="user">
-                            <img src="<%= data.user_profile_photo_small %>" alt="<%= data.user_firstname %>">
-                        </div>
-                        <div class="userdetails">
-                            <span class="username">@<%= data.user_firstname %></span>
-                            <span><%= data.user_firstname %> <%= data.user_lastname %></span>
-                        </div>
+    <%if (typeof data != null) { %>
+        <div class="post-wrapper">
+            <div class="image-wrapper">
+                <% if (data.video_thumb_url != "") { %>
+                    <img class="image" src="<%= data.video_thumb_url %>" alt="Image">
+                <% } %>
+                <% if (data.image_url != "") { %>
+                    <img class="image" src="<%= data.image_url %>" alt="Image">
+                <% } %>
+            </div>
+            <div class="post">
+                <div class="post__details">
+                    <div class="user">
+                        <img src="<%= data.user_profile_photo_small %>" alt="<%= data.user_firstname %>">
                     </div>
-                    <div class="content__main">
-                        <span class="text"><%= data.text %></span>
+                    <div class="userdetails">
+                        <span class="username">@<%= data.user_firstname %></span>
+                        <span><%= data.user_firstname %> <%= data.user_lastname %></span>
                     </div>
                 </div>
-            <% } %>
+                <div class="post__main">
+                    <span class="likes">
+                        <i class="fa fa-heart" aria-hidden="true"> </i>
+                        <% if (data.num_likes <= 1) { %>
+                            <%= data.num_likes %> Like
+                        <% } %>
+                        <% if (data.num_likes > 1) { %>
+                            <%= data.num_likes %> Likes
+                        <% } %>
+                    </span>
+                    <span class="text"><%= data.text %></span>
+                </div>
+                
+                <a class="download"href="https://itunes.apple.com/us/app/meanwise/id1159671281?mt=8">
+                    Open in app
+                </a>
+            </div>
         </div>
+    <% } %>
+    <div class="footer">
+        <span>© 2017 Meanwise Inc.</span>
     </div>
 
-    <div class="footer"></div>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="content/js/bundle.js"><\/script>')</script>
-
     <script src="/content/js/bundle.js"></script>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

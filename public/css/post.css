@@ -1,19 +1,32 @@
 body {
+    background-color: #fafefa;
     font: 16px/26px Helvetica,Helvetica Neue,Arial;;
     font-family: proxima_nova_rgregular;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    box-sizing: border-box;
 }
 
+/*Nav Bar*/
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 60px;
+    height: 70px;
     background-color: #fff;
     border-bottom: 1px solid #E6E6E6;
-    padding: 0 auto;
+    margin: 0 auto;
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 10;
 }
 
@@ -38,62 +51,59 @@ li {
     vertical-align: middle;
 }
 
-.content-container {
-    width: 100%;
-    background-color: #fafefa;
-    position: absolute;
-    margin-top: 61px;
-    height: calc(100% - 61px);
-}
+/*Post*/
 
-.wrapper {
-    margin: 60px auto;
+.post-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 800px;
+    height: 500px;
+    margin-top: 121px;
 }
 
 .image-wrapper {
     background-color: #000;
-    max-height: 500px;
     width: 500px;
+    height: 100%;
     display: flex;
     justify-content: center;
     box-shadow: 12px 15px 20px 0 rgba(46,61,73,.15);
-}
-
-.image {
-    background-color: #fff;
-    height: 100%;
     border-radius: 3px;
 }
 
-.content {
+.image {
+    max-width: 100%;
+    width: 300px;
+    background-color: #fff;
+}
+
+.post {
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 480px;
     background-color: #fefefe;
-    padding-top: 20px;
     border-radius: .09em;
     box-shadow: 12px 15px 20px 0 rgba(46,61,73,.15);
 }
 
-.content__details {
+.post__details {
     display: flex;
     flex-direction: row;
+    padding: 6px 0;
 }
 
-.content__details>div {
+.post__details > div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     height: 70px;
 }
 
 .user {
     padding-left: 28px;
-    width: 100px;
+    width: 90px;
     border-bottom: 1px solid rgba(46,61,73,.05);
 }
 
@@ -104,9 +114,13 @@ li {
 }
 
 .userdetails {
-    max-width: calc(100% - 100px);
+    max-width: calc(100% - 90px);
     border-bottom: 1px solid rgba(46,61,73,.05);
     width: 100%;
+}
+
+.userdetails > span {
+    line-height: 20px;
 }
 
 span {
@@ -117,6 +131,196 @@ span {
     color: #008BEF;
 }
 
-.content__main {
+.post__main {
     padding: 28px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.post__main .likes {
+    font-family: proxima_nova_ltsemibold;
+}
+
+.post__main span {
+    margin-bottom: 0px;
+}
+
+.fa-heart {
+    color: red;
+    font-size: 16px;
+}
+
+.download {
+    transform: translateY(-80%);
+    display: inline-block;
+    align-self: center;
+    padding: 5px 40px;
+    text-decoration: none;
+    font-family: proxima_nova_ltsemibold;
+    text-transform: uppercase;
+    border-radius: .19em;
+    font-size: 14px;
+    line-height: 26px;
+    color: #fff;
+    background-color: #66CCFF;
+    border: 1px solid #66CCFF;
+}
+
+.download:hover, .download:focus {
+    color: #66CCFF;
+    border: 1px solid #d6d6d6;
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 450px) {
+    .post-wrapper {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+        margin-top: 71px;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        display: block;
+    }
+
+    .image {
+        width: 100%;
+        display: block;
+    }
+
+    .post {
+        width: 100%;
+    }
+
+    .post__details > div {
+        justify-content: center;
+        height: 60px;
+    }
+
+    .user {
+        width: 80px;
+    }
+
+    .userdetails {
+        max-width: calc(100% - 80px);
+    }
+
+    .user img {
+        max-width: 40px;
+    }
+
+    .post__main {
+        padding: 20px 28px;
+    }
+
+    .download {
+        transform: none;
+        width: 100%;
+        align-self: center;
+        padding: 14px 0;
+        text-decoration: none;
+        text-align: center;
+        font-family: proxima_nova_ltsemibold;
+        text-transform: uppercase;
+        border-radius: 0;
+        font-size: 14px;
+        line-height: 26px;
+        color: #fff;
+        background-color: #66CCFF;
+        border: 1px solid #66CCFF;
+    }
+
+    .download:hover, .download:focus {
+        color: #fff;
+        border: 1px solid #51bef5;
+        background-color: #51bef5;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 451px) {
+    .post-wrapper {
+        flex-direction: column;
+        width: 451px;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        display: block;
+    }
+
+    .image {
+        width: 100%;
+        display: block;
+    }
+
+    .post {
+        width: 100%;
+    }
+
+    .post__details > div {
+        justify-content: center;
+        height: 60px;
+    }
+
+    .user {
+        width: 80px;
+    }
+
+    .userdetails {
+        max-width: calc(100% - 80px);
+    }
+
+
+    .user img {
+        max-width: 40px;
+    }
+
+    .post__main {
+        padding: 20px 28px;
+    }
+
+    .download {
+        transform: none;
+        width: 100%;
+        align-self: center;
+        padding: 14px 0;
+        text-decoration: none;
+        text-align: center;
+        font-family: proxima_nova_ltsemibold;
+        text-transform: uppercase;
+        border-radius: 0;
+        font-size: 14px;
+        line-height: 26px;
+        color: #fff;
+        background-color: #66CCFF;
+        border: 1px solid #66CCFF;
+    }
+
+    .download:hover, .download:focus {
+        color: #fff;
+        border: 1px solid #51bef5;
+        background-color: #51bef5;
+    }
+}
+
+/*footer*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #fefefe;
+    width: 100%;
+}
+
+.footer span {
+    color: #e6e9e6;
+    font-size: 14px;
+    font-family: proxima_nova_ththin;
 }
