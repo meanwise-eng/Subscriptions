@@ -72,12 +72,13 @@ ul {
     padding: 0;
 }
 
-li {
-    margin-left: 20px;
+li a {
     text-transform: uppercase;
     font-size: 13px;
     font-family: proxima_nova_ltsemibold;
     line-height: 1.2;
+    text-decoration: none;
+    color: #000;
 }
 
 .logo {
