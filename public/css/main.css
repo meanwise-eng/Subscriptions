@@ -131,6 +131,16 @@ body
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.full-height {
+    position: absolute;
 }
 
 .wrapper
@@ -142,7 +152,7 @@ body
 .wrapper-2
 {
     width: 50%;
-    margin: auto;
+    margin: 10px auto;
 
     text-align: center;
 }
@@ -359,12 +369,14 @@ body
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px)
+@media only screen and (max-width: 364px)
 {
     /* ====================
     INTERMEDIATE: Menu
    ==================== */
-
+    .footer-container a {
+        padding: 5px 15px;
+    }
 
 
     /* ========================
@@ -426,6 +438,8 @@ body
     {
         width: 65px;
     }
+
+
 
     /* ============
     WIDE: Menu
