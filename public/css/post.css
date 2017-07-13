@@ -203,7 +203,7 @@ span {
 }
 
 .download-ios {
-    display: inline-block;
+    display: none;
     align-self: center;
     padding: 5px 40px;
     text-decoration: none;
@@ -281,7 +281,7 @@ span {
     }
 
     .download {
-        display: inline-block;
+        display: none;
         width: calc(100% - 2px);
         align-self: center;
         padding: 14px 0;
@@ -298,10 +298,32 @@ span {
         border: 1px solid #66CCFF;
     }
 
+    .download-ios {
+        display: none;
+        align-self: center;
+        padding: 5px 40px;
+        text-decoration: none;
+        font-family: proxima_nova_ltsemibold;
+        text-transform: uppercase;
+        border-radius: .19em;
+        font-size: 14px;
+        line-height: 26px;
+        color: #fff;
+        margin: 20px auto;
+        background-color: #66CCFF;
+        border: 1px solid #66CCFF;
+    }
+
     .download:hover, .download:focus {
         color: #fff;
         border: 1px solid #51bef5;
         background-color: #51bef5;
+    }
+
+    .download-ios:hover, .download-ios:focus {
+        color: #66CCFF;
+        border: 1px solid #d6d6d6;
+        background-color: #fff;
     }
 }
 

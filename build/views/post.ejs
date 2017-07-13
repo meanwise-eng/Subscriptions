@@ -112,9 +112,9 @@
             navigator.userAgent.match(/iPad/i) ||
             navigator.userAgent.match(/iPod/i)) {
                 document.querySelector(".download-ios").href =  "meanwise://post/" + postid;
+                downloadIos.style.display = "inline-block";
         } else {
-            download.style.display = "block";
-            downloadIos.style.display = "none";
+            download.style.display = "inline-block";
         }
     </script>
 </body>
