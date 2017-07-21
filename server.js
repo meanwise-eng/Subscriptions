@@ -52,6 +52,10 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/build/views/index.html');
 });
 
+app.get('/invite', function (req, res) {
+    res.sendFile(__dirname + '/build/views/invite.html');
+});
+
 app.get('/contact', function (req, res) {
     res.sendFile(__dirname + '/build/views/contact.html');
 });
@@ -98,7 +102,7 @@ app.get('/post', function (req, res) {
     }
 });
 
-app.post('/', function (req, res) {
+app.post('/invite', function (req, res) {
     var email = req.body.email;
     var request = sg.emptyRequest();
     request.body = [
@@ -132,7 +136,7 @@ app.post('/', function (req, res) {
         });
     });
     
-    res.sendFile(__dirname + '/build/views/index.html');
+    res.sendFile(__dirname + '/build/views/invite.html');
 });
 
 app.post('/subscribe', function(req, res){

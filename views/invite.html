@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
-	<meta name="description" content="">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content." />
@@ -17,24 +17,24 @@
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
-    <meta property="og:description" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content.">	
+    <meta property="og:description" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content.">    
 
     <meta name="twitter:card" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content.">
-	<meta name="twitter:url" content="http://meanwise.com">
-	<meta name="twitter:title" content="Meanwise - Life . Work . Balance">
-	<meta name="twitter:description" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content.">
-	<meta name="twitter:image" content="http://54.68.84.196/img/meanw.png">
-	<meta name="description" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content.">
-	
+    <meta name="twitter:url" content="http://meanwise.com">
+    <meta name="twitter:title" content="Meanwise - Life . Work . Balance">
+    <meta name="twitter:description" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content.">
+    <meta name="twitter:image" content="http://54.68.84.196/img/meanw.png">
+    <meta name="description" content="Meanwise is a social discovery platform that encourages sharing and engaging with purposeful content.">
+    
     <link rel="icon" href="content/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="content/img/favicon.ico" type="image/x-icon">
 
-	<link rel="stylesheet" href="/content/css/normalize.min.css">
+    <link rel="stylesheet" href="/content/css/normalize.min.css">
     <link rel="stylesheet" href="/content/css/main.css">
 
-	<title>Meanwise</title>
+    <title>Meanwise</title>
 </head>
-<body>
+<body style="background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: absolute;">
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -43,19 +43,19 @@
         <header class="wrapper clearfix">
             <h1 class="title">
               <a class="logo" href="/"><img src="/content/img/logo.svg"></a>
+              <a class="logo-comic-con" href="/"><img src="/content/img/images.png"></a>
             </h1>
         </header>
     </div>
 
-    <div class="main-container">
-        <div class="main wrapper-2 clearfix">
-          <div class="phone">
-            <video id="vdo" loop autoplay="true" muted="" src="/content/videos/meanwise-prototype.mp4" class="state-ready"></video>
-          </div>
-          <h1 class="title-text">Meanwise makes it simple and fun to capture moments from your work life as it happens.</h1>
-          <a href="https://itunes.apple.com/us/app/meanwise/id1159671281?mt=8"><img class="appstore-badge" src="/content/img/appstore.svg"></a>
-        </div> <!-- #main -->
-    </div> <!-- #main-container -->
+    <div class="form-wrapper">
+        <form id="SubsribeForm1" onSubmit="subscribe(event)">
+            <input class="email" type="text" name="email" placeholder="Please enter your email" />
+            <p class="err"></p>
+            
+            <button id="SubscribeEmail">Submit</button>
+        </form>
+    </div>
 
     <div class="footer-container">
         <footer class="wrapper">
@@ -66,8 +66,8 @@
         </footer>
     </div>
 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="/content/js/bundle.js"></script>
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -82,6 +82,27 @@
                 $(this).attr('src', $(this).data('src'));
             });
         });
+
+        function subscribe(event) {
+            event.preventDefault();
+            let email = document.querySelector(".email").value;
+            console.log(email);
+            $('.err')[0].innerHTML = "Please Wait...";
+
+            $.ajax({
+                url: '/subscribe',
+                type: 'POST',
+                cache: false, 
+                data: { email: email },
+                success: function(data){
+                    email.value = '';
+                    $('.err')[0].innerHTML = data.message;
+                },
+                error: function(data){
+                    $('.err')[0].innerHTML = data.message;
+                }
+            });
+        }
 
     </script>
 </body>

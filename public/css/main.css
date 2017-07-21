@@ -653,7 +653,7 @@ body
     background-image:         linear-gradient(-225deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
 }
 
-#emailAdd
+.email
 {
     font-size: 24px;
     font-weight: 100;
@@ -672,16 +672,21 @@ body
 
 #SubscribeEmail
 {
-    font-family: 'proxima_nova_thextrabold';
+    font-family: proxima_nova_thextrabold;
     font-size: 24px;
     font-weight: 900;
-
     cursor: pointer;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: 0;
+    background: 0 0;
+    width: 50%;
+    padding: 5px;
+    border-radius: .999em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    color: white;
-    border: none;
-    outline: none;
-    background: none;
 }
 
 input:-webkit-autofill,
@@ -719,7 +724,7 @@ input:-webkit-autofill:active
     {
         font-size: 32px;
 
-        width: 35%;
+        width: 100%;
     }
     #demo02
     {
@@ -729,7 +734,7 @@ input:-webkit-autofill:active
 
 /*Placeholder*/
 
-#emailAdd::-webkit-input-placeholder
+.email::-webkit-input-placeholder
 {
     font-family: 'proxima_nova_ltlight', Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -738,7 +743,7 @@ input:-webkit-autofill:active
     color: white;
 }
 
-#emailAdd:-ms-input-placeholder
+.email:-ms-input-placeholder
 {
     font-family: 'proxima_nova_ltlight', Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -747,7 +752,7 @@ input:-webkit-autofill:active
     color: white;
 }
 
-#emailAdd:-moz-placeholder
+.email:-moz-placeholder
 {
     font-family: 'proxima_nova_ltlight', Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -756,11 +761,31 @@ input:-webkit-autofill:active
     color: white;
 }
 
-#emailAdd::-moz-placeholder
+.email::-moz-placeholder
 {
     font-family: 'proxima_nova_ltlight', Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: 200;
 
     color: white;
+}
+
+.logo-comic-con>img {
+    width: 75px;
+    margin-left: 15px;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#SubsribeForm1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
