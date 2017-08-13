@@ -68,6 +68,10 @@ app.get('/terms', function (req, res) {
     res.sendFile(__dirname + '/build/views/terms.html');
 });
 
+app.get('/.well-known/assetlinks.json', function (req, res) {
+    res.sendFile(__dirname + '/build/views/assetlinks.json');
+});
+
 app.get('/post', function (req, res) {
     const postId = req.param('post');
     let data;

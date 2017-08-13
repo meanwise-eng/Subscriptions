@@ -29,7 +29,7 @@ gulp.task('init', ['css', 'js'], function () {
   });
 });
 //should for prod
-gulp.task('assets', ['css', 'js', 'img', 'html', 'font', 'ejs'], function () {
+gulp.task('assets', ['css', 'js', 'img', 'html', 'font', 'ejs', 'json'], function () {
   gulp.start('rev');
 });
 // Default task

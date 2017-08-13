@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.meanwise.meanwise",
+    "sha256_cert_fingerprints":
+    ["FE:E9:D2:6C:7F:DC:3A:B6:E4:32:38:D0:09:B1:40:46:BC:36:27:67:97:AE:50:05:95:6A:7E:51:80:F0:3E:2B"]
+  }
+}]
