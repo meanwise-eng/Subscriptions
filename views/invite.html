@@ -86,20 +86,20 @@
         function subscribe(event) {
             event.preventDefault();
             let email = document.querySelector(".email").value;
-            console.log(email);
-            $('.err')[0].innerHTML = "Please Wait...";
+            let error = document.querySelector(".err");
+            error.innerHTML = "Please Wait...";
 
             $.ajax({
-                url: '/subscribe',
+                url: '/invite',
                 type: 'POST',
                 cache: false, 
                 data: { email: email },
-                success: function(data){
+                success: function(data) {
                     email.value = '';
-                    $('.err')[0].innerHTML = data.message;
+                    error.innerHTML = data.message;
                 },
                 error: function(data){
-                    $('.err')[0].innerHTML = data.message;
+                    error.innerHTML = data.message;
                 }
             });
         }

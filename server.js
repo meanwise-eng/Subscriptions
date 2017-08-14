@@ -106,41 +106,58 @@ app.get('/post', function (req, res) {
     }
 });
 
-app.post('/invite', function (req, res) {
+app.post('/invite', function(req, res){
     var email = req.body.email;
-    var request = sg.emptyRequest();
-    request.body = [
-        {
-            'email': email
-        }
-    ];
-    
-    request.method = 'POST';
-    request.path = '/v3/contactdb/recipients';
-    
-    sg.API(request, function (error, response) {
-        var data = response.body;
-        var reqs = sg.emptyRequest();
-        var list_id = 665876;
-        var recipient_id = data["persisted_recipients"];
-        
-        reqs.method = 'POST';
-        reqs.path = '/v3/contactdb/lists/' + list_id + '/recipients/' + recipient_id;
+    console.log(email);
+    var result = {};
+    res.writeHead(200, {"Content-Type": "application/json"});
 
-        
-        sg.API(reqs, function (error, resp) {
-            err = error
-            if (error) {
-                console.log(error);
-            }
-            else {
-                console.log('Email successfully added to the list');
-                send(helloEmail(email));
-            }
-        });
-    });
+    req.checkBody("email").isEmail();
+    var errors = req.validationErrors();
     
-    res.sendFile(__dirname + '/build/views/invite.html');
+    if (errors) {
+        result = {
+            status: 400,
+            message: 'Your email is not valid. Please enter a valid email address.'
+        };
+        res.end(JSON.stringify(result));
+    }
+    else {
+        var request = sg.emptyRequest();
+        request.body = [
+            {
+                'email': email
+            }
+        ];
+        request.method = 'POST';
+        request.path = '/v3/contactdb/recipients';
+        sg.API(request, function (error, response) {
+            var data = response.body;
+            var reqs = sg.emptyRequest();
+            var list_id = 665876;
+            var recipient_id = data["persisted_recipients"];
+            
+            
+            reqs.method = 'POST';
+            reqs.path = '/v3/contactdb/lists/' + list_id + '/recipients/' + recipient_id;
+            
+            sg.API(reqs, function (error, resp) {
+                err = error
+                if (error) {
+                    console.log(error);
+                }
+                else {
+                    console.log('Email successfully added to the list');
+                    send(helloEmail(email));
+                }
+                result = {
+                    status: 200,
+                    message: "You've been successfully subscribed"
+                };
+                res.end(JSON.stringify(result));
+            });
+        });
+    }
 });
 
 app.post('/subscribe', function(req, res){
@@ -171,7 +188,7 @@ app.post('/subscribe', function(req, res){
         sg.API(request, function (error, response) {
             var data = response.body;
             var reqs = sg.emptyRequest();
-            var list_id = 665876;
+            var list_id = 1757333;
             var recipient_id = data["persisted_recipients"];
             
             
