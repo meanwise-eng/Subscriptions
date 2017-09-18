@@ -72,6 +72,10 @@ app.get('/download', function (req, res) {
     res.redirect('https://itunes.apple.com/us/app/meanwise/id1159671281?mt=8');
 });
 
+app.get('/iphonecontest', function (req, res) {
+    res.sendFile(__dirname + '/build/views/iphonecontest.html');
+});
+
 app.get('/.well-known/assetlinks.json', function (req, res) {
     res.sendFile(__dirname + '/build/views/assetlinks.json');
 });
